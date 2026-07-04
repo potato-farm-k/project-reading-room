@@ -3,6 +3,7 @@ title: Potato’s Day README
 category: potato-day
 source_repo: potato-day
 source_path: README.md
+type: reading-copy
 copy_type: reading-copy
 last_reviewed: 2026-07-04
 print_friendly: true

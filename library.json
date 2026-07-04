@@ -61,6 +61,14 @@
     "category": "potato-day",
     "path": "library/potato-day/README.md",
     "type": "reading-copy",
-    "description": "Potato’s Day의 프로젝트 개요, 현재 기능, 개발 방향, 버전 흐름을 반복해서 확인하기 위한 대표 문서"
+    "description": "Potato’s Day의 프로젝트 개요와 현재 방향을 정리한 대표 문서"
+  },
+  {
+    "id": "potato-day-sprite-lab",
+    "title": "Potato’s Day Sprite Lab",
+    "category": "potato-day",
+    "path": "library/potato-day/SPRITE_LAB.md",
+    "type": "reading-copy",
+    "description": "Sprite Lab 운영 원칙과 sprite animation 추가 기준을 정리한 문서"
   }
 ]

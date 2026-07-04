@@ -95,6 +95,7 @@ library/
     simulator-checklist.md
   potato-day/
     README.md
+    SPRITE_LAB.md
 ```
 
 각 Markdown 파일에는 `title`, `category`, `source_repo`, `source_path`, `copy_type`, `last_reviewed`, `print_friendly`를 기록하는 간단한 YAML frontmatter가 있습니다. frontmatter는 문서 자체를 관리하기 위한 메모이며 화면 목록의 기준이 아닙니다. 앱은 이를 해석하지 않고 본문 렌더링 전에 숨깁니다.
