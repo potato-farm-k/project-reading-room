@@ -8,6 +8,8 @@
 - `project-reading-room`의 project-specific 문서는 원본을 읽기 좋게 복사한 `reading-copy`입니다.
 - `common` 문서는 여러 프로젝트에 공통으로 적용하는 학습 자료이며, 이 저장소가 원본(`source`)일 수 있습니다.
 - 모든 문서를 모으기보다 반복해서 읽을 문서만 `library.json`에 등록합니다.
+- `library.json`이 리딩룸의 문서 목록과 화면 메타데이터를 정하는 기준입니다.
+- `library.json`에 작성한 순서가 화면의 문서 표시 순서이며, 읽기 좋은 순서는 이 파일에서 수동으로 관리합니다.
 
 `reading-copy`를 수정해야 할 때는 먼저 원본 repo를 갱신한 뒤 이곳의 사본을 맞추는 것을 원칙으로 합니다.
 
@@ -28,13 +30,14 @@ library/
     asset-notes.md
 ```
 
-각 Markdown 파일에는 `title`, `category`, `source_repo`, `source_path`, `copy_type`, `last_reviewed`, `print_friendly`를 기록하는 간단한 YAML frontmatter가 있습니다. 앱은 이를 복잡하게 해석하지 않고 본문 렌더링 전에 숨깁니다.
+각 Markdown 파일에는 `title`, `category`, `source_repo`, `source_path`, `copy_type`, `last_reviewed`, `print_friendly`를 기록하는 간단한 YAML frontmatter가 있습니다. frontmatter는 문서 자체를 관리하기 위한 메모이며 화면 목록의 기준이 아닙니다. 앱은 이를 해석하지 않고 본문 렌더링 전에 숨깁니다.
 
 ## 문서 추가하기
 
 1. `library/` 아래 알맞은 category 폴더에 Markdown 파일을 추가합니다.
 2. 파일 상단에 기존 문서와 같은 형식의 frontmatter를 작성합니다.
 3. `library.json`에 아래 필드로 문서를 등록합니다.
+4. 로컬 정적 서버에서 문서 목록과 본문 표시를 확인합니다.
 
 ```json
 {
@@ -47,7 +50,7 @@ library/
 }
 ```
 
-`type`은 `source` 또는 `reading-copy`만 사용합니다. 모든 경로는 GitHub Pages의 프로젝트 사이트에서도 동작하도록 상대 경로로 작성합니다.
+`type`은 `source` 또는 `reading-copy`만 사용합니다. 목록의 위치를 바꾸려면 객체를 `library.json` 안에서 원하는 순서로 옮깁니다. 모든 경로는 GitHub Pages의 프로젝트 사이트에서도 동작하도록 상대 경로로 작성합니다.
 
 ## 로컬에서 확인하기
 

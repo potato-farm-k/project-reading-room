@@ -41,9 +41,7 @@ function stripFrontmatter(markdown) {
 }
 
 function populateCategories() {
-  const categories = [...new Set(state.documents.map((document) => document.category))].sort(
-    (a, b) => a.localeCompare(b),
-  );
+  const categories = [...new Set(state.documents.map((document) => document.category))];
 
   const options = categories
     .map(
