@@ -1,0 +1,66 @@
+[
+  {
+    "id": "common-vibe-coding-habit-guide",
+    "title": "Vibe Coding Habit Guide",
+    "category": "common",
+    "path": "library/common/vibe-coding-habit-guide.md",
+    "type": "source",
+    "description": "AI 협업 개발 습관을 반복해서 점검하기 위한 공통 가이드"
+  },
+  {
+    "id": "common-prompt-library",
+    "title": "Prompt Library",
+    "category": "common",
+    "path": "library/common/prompt-library.md",
+    "type": "source",
+    "description": "반복해서 사용하는 AI 협업 프롬프트 구조 모음"
+  },
+  {
+    "id": "common-ai-collaboration-workflow",
+    "title": "AI Collaboration Workflow",
+    "category": "common",
+    "path": "library/common/ai-collaboration-workflow.md",
+    "type": "source",
+    "description": "AI와 함께 작업할 때 아이디어를 구현과 기록으로 연결하는 흐름"
+  },
+  {
+    "id": "lao-glossary",
+    "title": "Living Aegis Origin Glossary",
+    "category": "living-aegis-origin",
+    "path": "library/living-aegis-origin/glossary.md",
+    "type": "reading-copy",
+    "description": "Living Aegis Origin 프로젝트에서 반복해서 확인할 용어집"
+  },
+  {
+    "id": "lao-sound-direction",
+    "title": "Sound Direction",
+    "category": "living-aegis-origin",
+    "path": "library/living-aegis-origin/sound-direction.md",
+    "type": "reading-copy",
+    "description": "Living Aegis Origin의 감정 중심 사운드 방향"
+  },
+  {
+    "id": "lao-simulator-checklist",
+    "title": "Simulator Checklist",
+    "category": "living-aegis-origin",
+    "path": "library/living-aegis-origin/simulator-checklist.md",
+    "type": "reading-copy",
+    "description": "Living Aegis Origin 시뮬레이터 점검 항목"
+  },
+  {
+    "id": "potato-day-decision-log",
+    "title": "Potato Day Decision Log",
+    "category": "potato-day",
+    "path": "library/potato-day/decision-log.md",
+    "type": "reading-copy",
+    "description": "Potato Day 프로젝트의 주요 결정과 이유를 읽기 위한 기록"
+  },
+  {
+    "id": "potato-day-asset-notes",
+    "title": "Potato Day Asset Notes",
+    "category": "potato-day",
+    "path": "library/potato-day/asset-notes.md",
+    "type": "reading-copy",
+    "description": "Potato Day 에셋 방향과 제작 메모를 모은 읽기 사본"
+  }
+]

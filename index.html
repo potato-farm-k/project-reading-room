@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="프로젝트 문서와 공통 학습 자료를 읽는 개인용 Markdown Reading Room"
+    />
+    <title>Project Reading Room</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="문서 탐색">
+        <header class="brand">
+          <p class="eyebrow">Personal library</p>
+          <h1>Project<br /> Reading Room</h1>
+          <p class="brand-description">
+            프로젝트 기록과 공통 학습 문서를 한곳에서 천천히 읽습니다.
+          </p>
+        </header>
+
+        <div class="toolbar">
+          <div class="field-group">
+            <label for="category-filter">카테고리</label>
+            <select id="category-filter">
+              <option value="all">모든 카테고리</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="search-input">문서 검색</label>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="제목, 설명, 카테고리 검색"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div class="library-heading">
+          <h2>Library</h2>
+          <span id="document-count" aria-live="polite">0 documents</span>
+        </div>
+
+        <nav aria-label="문서 목록">
+          <ul id="document-list" class="document-list">
+            <li class="list-message">문서 목록을 불러오는 중입니다…</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="content-toolbar">
+          <div>
+            <p class="eyebrow">Now reading</p>
+            <p id="current-document" class="current-document">문서를 선택해 주세요</p>
+          </div>
+          <button id="print-button" class="print-button" type="button">
+            <span aria-hidden="true">↗</span>
+            인쇄 / PDF
+          </button>
+        </header>
+
+        <article id="reader" class="reader" aria-live="polite">
+          <div class="reader-state">
+            <p class="state-label">Reading room</p>
+            <h2>라이브러리를 준비하고 있습니다.</h2>
+          </div>
+        </article>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
