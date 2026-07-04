@@ -78,6 +78,23 @@ function renderJekyllHtml(html) {
   }
 
   elements.reader.innerHTML = content.innerHTML;
+  enhanceRenderedContent();
+}
+
+function enhanceRenderedContent() {
+  elements.reader.querySelectorAll("table").forEach((table) => {
+    if (table.parentElement?.classList.contains("table-wrapper")) {
+      return;
+    }
+
+    const wrapper = window.document.createElement("div");
+    wrapper.className = "table-wrapper";
+    wrapper.setAttribute("role", "region");
+    wrapper.setAttribute("aria-label", "스크롤 가능한 표");
+    wrapper.tabIndex = 0;
+    table.before(wrapper);
+    wrapper.appendChild(table);
+  });
 }
 
 function populateCategories() {
@@ -174,7 +191,11 @@ async function loadDocument(document) {
       return;
     }
 
-    elements.reader.innerHTML = window.marked.parse(markdown);
+    elements.reader.innerHTML = window.marked.parse(markdown, {
+      gfm: true,
+      breaks: false,
+    });
+    enhanceRenderedContent();
     window.document.title = `${document.title} — Project Reading Room`;
   } catch (error) {
     if (error.name === "AbortError") {
