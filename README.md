@@ -87,6 +87,10 @@ library/
   common/
     vibe-coding-habit-guide.md
     project-reading-room-document-flow.md
+  living-aegis-origin/
+    glossary.md
+    sound-direction.md
+    concept-art-prompt-pack.md
   potato-day/
     README.md
     SPRITE_LAB.md

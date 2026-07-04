@@ -16,6 +16,30 @@
     "description": "원본 문서 선별부터 reading copy 반영과 검증까지 정리한 Reading Room 운영 가이드"
   },
   {
+    "id": "lao-glossary",
+    "title": "Living Aegis Origin Glossary",
+    "category": "living-aegis-origin",
+    "path": "library/living-aegis-origin/glossary.md",
+    "type": "reading-copy",
+    "description": "LAO 역할 채팅과 Codex 작업에서 공통으로 사용할 프로젝트 용어집"
+  },
+  {
+    "id": "lao-sound-direction",
+    "title": "Living Aegis Origin Sound Direction Memo",
+    "category": "living-aegis-origin",
+    "path": "library/living-aegis-origin/sound-direction.md",
+    "type": "reading-copy",
+    "description": "초반 오프닝, 방어자 각성, mood track prompt 기준을 정리한 사운드 방향 메모"
+  },
+  {
+    "id": "lao-concept-art-prompt-pack",
+    "title": "Living Aegis Origin Concept Art Prompt Pack",
+    "category": "living-aegis-origin",
+    "path": "library/living-aegis-origin/concept-art-prompt-pack.md",
+    "type": "reading-copy",
+    "description": "LAO 주요 장면과 에셋 방향을 항목별 concept art prompt로 정리한 기준 문서"
+  },
+  {
     "id": "potato-day-readme",
     "title": "Potato’s Day README",
     "category": "potato-day",
