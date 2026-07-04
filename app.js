@@ -1,4 +1,5 @@
 const elements = {
+  appTitleButton: document.querySelector("#app-title-button"),
   categoryFilter: document.querySelector("#category-filter"),
   searchInput: document.querySelector("#search-input"),
   documentList: document.querySelector("#document-list"),
@@ -97,6 +98,90 @@ function enhanceRenderedContent() {
   });
 }
 
+function getFileName(path) {
+  return path.split("/").pop();
+}
+
+function renderRootIndex() {
+  if (state.activeRequest) {
+    state.activeRequest.abort();
+    state.activeRequest = null;
+  }
+
+  state.selectedId = null;
+  elements.currentDocument.textContent = "Reading Room 현황";
+  renderDocumentList();
+
+  const categories = [
+    ...new Set(state.documents.map((document) => document.category)),
+  ];
+
+  const sections = categories
+    .map((category) => {
+      const rows = state.documents
+        .filter((document) => document.category === category)
+        .map(
+          (document) => `
+            <tr>
+              <td>
+                <button
+                  class="root-index-link"
+                  type="button"
+                  data-root-document-id="${escapeHtml(document.id)}"
+                >
+                  ${escapeHtml(document.title)}
+                </button>
+              </td>
+              <td>${escapeHtml(getFileName(document.path))}</td>
+              <td><span class="root-index-type">${escapeHtml(document.type)}</span></td>
+              <td class="root-index-path"><code>${escapeHtml(document.path)}</code></td>
+              <td>${escapeHtml(document.description)}</td>
+            </tr>
+          `,
+        )
+        .join("");
+
+      return `
+        <section class="root-index-section">
+          <h2>${escapeHtml(category)}</h2>
+          <div
+            class="table-wrapper"
+            role="region"
+            aria-label="${escapeHtml(category)} 문서 목록"
+            tabindex="0"
+          >
+            <table class="root-index-table">
+              <thead>
+                <tr>
+                  <th scope="col">표시 제목</th>
+                  <th scope="col">파일명</th>
+                  <th scope="col">type</th>
+                  <th scope="col">path</th>
+                  <th scope="col">description</th>
+                </tr>
+              </thead>
+              <tbody>${rows}</tbody>
+            </table>
+          </div>
+        </section>
+      `;
+    })
+    .join("");
+
+  elements.reader.innerHTML = `
+    <div class="root-index">
+      <p class="state-label">Root index</p>
+      <h1>Reading Room 현황</h1>
+      <p class="root-index-summary">등록 문서 수: <strong>${state.documents.length}</strong></p>
+      ${
+        sections ||
+        '<p class="root-index-empty">아직 library.json에 등록된 문서가 없습니다.</p>'
+      }
+    </div>
+  `;
+  window.document.title = "Reading Room 현황 — Project Reading Room";
+}
+
 function populateCategories() {
   const categories = [...new Set(state.documents.map((document) => document.category))];
 
@@ -132,14 +217,21 @@ function renderDocumentList() {
   const documents = getFilteredDocuments();
   elements.documentCount.textContent = `${documents.length} document${documents.length === 1 ? "" : "s"}`;
 
-  if (!documents.length) {
-    elements.documentList.innerHTML = `
-      <li class="list-message">검색 조건에 맞는 문서가 없습니다.</li>
-    `;
-    return;
-  }
+  const rootIndexItem = `
+    <li>
+      <button
+        class="document-button${state.selectedId === null ? " is-active" : ""}"
+        type="button"
+        data-show-root-index
+        ${state.selectedId === null ? 'aria-current="page"' : ""}
+      >
+        <span class="document-title">현황</span>
+        <span class="document-meta">Root index</span>
+      </button>
+    </li>
+  `;
 
-  elements.documentList.innerHTML = documents
+  const documentItems = documents
     .map(
       (document) => `
         <li>
@@ -156,6 +248,12 @@ function renderDocumentList() {
       `,
     )
     .join("");
+
+  const emptyMessage = documents.length
+    ? ""
+    : '<li class="list-message">검색 조건에 맞는 문서가 없습니다.</li>';
+
+  elements.documentList.innerHTML = rootIndexItem + documentItems + emptyMessage;
 }
 
 async function loadDocument(document) {
@@ -228,13 +326,7 @@ async function loadLibrary() {
 
     state.documents = documents;
     populateCategories();
-    renderDocumentList();
-
-    if (documents.length) {
-      await loadDocument(documents[0]);
-    } else {
-      showReaderMessage("아직 등록된 문서가 없습니다.", "library.json에 문서를 추가해 주세요.");
-    }
+    renderRootIndex();
   } catch (error) {
     elements.documentList.innerHTML = `
       <li class="list-message">라이브러리 목록을 불러오지 못했습니다.</li>
@@ -248,6 +340,12 @@ async function loadLibrary() {
 }
 
 elements.documentList.addEventListener("click", (event) => {
+  const rootIndexButton = event.target.closest("[data-show-root-index]");
+  if (rootIndexButton) {
+    renderRootIndex();
+    return;
+  }
+
   const button = event.target.closest("[data-document-id]");
   if (!button) {
     return;
@@ -259,6 +357,21 @@ elements.documentList.addEventListener("click", (event) => {
   }
 });
 
+elements.reader.addEventListener("click", (event) => {
+  const button = event.target.closest("[data-root-document-id]");
+  if (!button) {
+    return;
+  }
+
+  const document = state.documents.find(
+    (item) => item.id === button.dataset.rootDocumentId,
+  );
+  if (document) {
+    loadDocument(document);
+  }
+});
+
+elements.appTitleButton.addEventListener("click", renderRootIndex);
 elements.categoryFilter.addEventListener("change", renderDocumentList);
 elements.searchInput.addEventListener("input", renderDocumentList);
 elements.printButton.addEventListener("click", () => window.print());

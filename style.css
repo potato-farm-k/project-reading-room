@@ -74,6 +74,27 @@ select {
   white-space: nowrap;
 }
 
+.app-title-button {
+  display: block;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  white-space: inherit;
+  cursor: pointer;
+}
+
+.app-title-button:hover {
+  color: var(--accent);
+}
+
+.app-title-button:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .brand-description {
   max-width: 240px;
   margin: 14px 0 0;
@@ -403,6 +424,84 @@ select {
   background: #fafbfc;
 }
 
+.root-index-summary {
+  margin-bottom: 2rem !important;
+  color: var(--muted);
+}
+
+.root-index-summary strong {
+  color: var(--ink);
+}
+
+.root-index-section {
+  margin-top: 2.5rem;
+}
+
+.root-index-section h2 {
+  margin-top: 0;
+}
+
+.root-index-table {
+  min-width: 820px !important;
+  font-size: 0.84rem !important;
+}
+
+.root-index-table th:nth-child(1) {
+  min-width: 180px;
+}
+
+.root-index-table th:nth-child(2) {
+  min-width: 170px;
+}
+
+.root-index-table th:nth-child(3) {
+  min-width: 108px;
+}
+
+.root-index-table th:nth-child(4) {
+  min-width: 220px;
+}
+
+.root-index-link {
+  padding: 0;
+  border: 0;
+  color: var(--accent);
+  background: transparent;
+  text-align: left;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  cursor: pointer;
+}
+
+.root-index-link:hover {
+  color: var(--ink);
+}
+
+.root-index-link:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.root-index-type {
+  white-space: nowrap;
+}
+
+.root-index-path code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.root-index-empty {
+  padding: 1rem 0;
+  color: var(--muted);
+}
+
 .reader-state {
   padding: 42px;
   border: 1px dashed var(--line);
@@ -596,6 +695,11 @@ select {
     font-size: 9.5pt;
   }
 
+  .root-index-table {
+    min-width: 0 !important;
+    font-size: 8.5pt !important;
+  }
+
   .reader table,
   .reader th,
   .reader td {
@@ -616,6 +720,10 @@ select {
   }
 
   .reader a {
+    color: #000;
+  }
+
+  .root-index-link {
     color: #000;
   }
 
