@@ -48,19 +48,11 @@
     "description": "Living Aegis Origin 시뮬레이터 점검 항목"
   },
   {
-    "id": "potato-day-decision-log",
-    "title": "Potato Day Decision Log",
+    "id": "potato-day-readme",
+    "title": "Potato’s Day README",
     "category": "potato-day",
-    "path": "library/potato-day/decision-log.md",
+    "path": "library/potato-day/README.md",
     "type": "reading-copy",
-    "description": "Potato Day 프로젝트의 주요 결정과 이유를 읽기 위한 기록"
-  },
-  {
-    "id": "potato-day-asset-notes",
-    "title": "Potato Day Asset Notes",
-    "category": "potato-day",
-    "path": "library/potato-day/asset-notes.md",
-    "type": "reading-copy",
-    "description": "Potato Day 에셋 방향과 제작 메모를 모은 읽기 사본"
+    "description": "Potato’s Day의 프로젝트 개요, 현재 기능, 개발 방향, 버전 흐름을 반복해서 확인하기 위한 대표 문서"
   }
 ]
