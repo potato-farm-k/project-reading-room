@@ -71,6 +71,7 @@ select {
   font-weight: 680;
   letter-spacing: -0.025em;
   line-height: 1.12;
+  white-space: nowrap;
 }
 
 .brand-description {

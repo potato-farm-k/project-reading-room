@@ -1,27 +1,11 @@
 [
   {
     "id": "common-vibe-coding-habit-guide",
-    "title": "채팅 속 지식을 내 지식으로 바꾸는 바이브코딩 습관 가이드",
+    "title": "바이브코딩 습관 가이드",
     "category": "common",
     "path": "library/common/vibe-coding-habit-guide.md",
     "type": "source",
     "description": "AI 답변을 판단 기준과 반복 가능한 지식으로 바꾸는 정리·결정·기록 습관 가이드"
-  },
-  {
-    "id": "common-prompt-library",
-    "title": "Prompt Library",
-    "category": "common",
-    "path": "library/common/prompt-library.md",
-    "type": "source",
-    "description": "반복해서 사용하는 AI 협업 프롬프트 구조 모음"
-  },
-  {
-    "id": "common-ai-collaboration-workflow",
-    "title": "AI Collaboration Workflow",
-    "category": "common",
-    "path": "library/common/ai-collaboration-workflow.md",
-    "type": "source",
-    "description": "AI와 함께 작업할 때 아이디어를 구현과 기록으로 연결하는 흐름"
   },
   {
     "id": "common-project-reading-room-document-flow",
@@ -30,30 +14,6 @@
     "path": "library/common/project-reading-room-document-flow.md",
     "type": "source",
     "description": "원본 문서 선별부터 reading copy 반영과 검증까지 정리한 Reading Room 운영 가이드"
-  },
-  {
-    "id": "lao-glossary",
-    "title": "Living Aegis Origin Glossary",
-    "category": "living-aegis-origin",
-    "path": "library/living-aegis-origin/glossary.md",
-    "type": "reading-copy",
-    "description": "Living Aegis Origin 프로젝트에서 반복해서 확인할 용어집"
-  },
-  {
-    "id": "lao-sound-direction",
-    "title": "Sound Direction",
-    "category": "living-aegis-origin",
-    "path": "library/living-aegis-origin/sound-direction.md",
-    "type": "reading-copy",
-    "description": "Living Aegis Origin의 감정 중심 사운드 방향"
-  },
-  {
-    "id": "lao-simulator-checklist",
-    "title": "Simulator Checklist",
-    "category": "living-aegis-origin",
-    "path": "library/living-aegis-origin/simulator-checklist.md",
-    "type": "reading-copy",
-    "description": "Living Aegis Origin 시뮬레이터 점검 항목"
   },
   {
     "id": "potato-day-readme",

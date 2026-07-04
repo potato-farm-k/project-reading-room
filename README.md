@@ -86,13 +86,7 @@ project category:
 library/
   common/
     vibe-coding-habit-guide.md
-    prompt-library.md
-    ai-collaboration-workflow.md
     project-reading-room-document-flow.md
-  living-aegis-origin/
-    glossary.md
-    sound-direction.md
-    simulator-checklist.md
   potato-day/
     README.md
     SPRITE_LAB.md
