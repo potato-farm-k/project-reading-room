@@ -153,6 +153,8 @@ python3 -m http.server 8000
 3. 배포할 branch와 `/(root)` 폴더를 선택하고 저장합니다.
 4. Pages가 안내하는 URL에서 Reading Room을 확인합니다.
 
+루트의 `.nojekyll`은 YAML frontmatter가 있는 Markdown 원본을 GitHub Pages가 `.html`로 변환하지 않고 `.md` 경로 그대로 배포하도록 합니다. 앱이 `library.json`의 Markdown 경로를 직접 불러오므로 이 파일을 유지합니다.
+
 ## 인쇄 및 PDF 저장
 
 읽을 문서를 선택하고 **인쇄 / PDF** 버튼을 누릅니다. 인쇄 화면에서는 검색, category filter, 문서 목록과 조작 버튼이 숨겨지며 본문 중심의 흑백 친화적 레이아웃이 적용됩니다. 브라우저 인쇄 창의 대상에서 프린터 또는 PDF 저장을 선택합니다.
