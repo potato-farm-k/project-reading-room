@@ -24,6 +24,14 @@
     "description": "AI와 함께 작업할 때 아이디어를 구현과 기록으로 연결하는 흐름"
   },
   {
+    "id": "common-project-reading-room-document-flow",
+    "title": "Project Reading Room Document Flow",
+    "category": "common",
+    "path": "library/common/project-reading-room-document-flow.md",
+    "type": "source",
+    "description": "원본 문서 선별부터 reading copy 반영과 검증까지 정리한 Reading Room 운영 가이드"
+  },
+  {
     "id": "lao-glossary",
     "title": "Living Aegis Origin Glossary",
     "category": "living-aegis-origin",

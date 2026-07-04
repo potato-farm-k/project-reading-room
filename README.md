@@ -88,6 +88,7 @@ library/
     vibe-coding-habit-guide.md
     prompt-library.md
     ai-collaboration-workflow.md
+    project-reading-room-document-flow.md
   living-aegis-origin/
     glossary.md
     sound-direction.md
@@ -153,7 +154,7 @@ python3 -m http.server 8000
 3. 배포할 branch와 `/(root)` 폴더를 선택하고 저장합니다.
 4. Pages가 안내하는 URL에서 Reading Room을 확인합니다.
 
-루트의 `.nojekyll`은 YAML frontmatter가 있는 Markdown 원본을 GitHub Pages가 `.html`로 변환하지 않고 `.md` 경로 그대로 배포하도록 합니다. 앱이 `library.json`의 Markdown 경로를 직접 불러오므로 이 파일을 유지합니다.
+GitHub Pages의 Jekyll 배포는 frontmatter가 있는 Markdown을 `.html`로 변환할 수 있습니다. 앱은 원래 `.md` 경로가 없으면 같은 이름의 `.html` 문서에서 본문을 읽어 표시합니다.
 
 ## 인쇄 및 PDF 저장
 

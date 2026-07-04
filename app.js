@@ -40,6 +40,46 @@ function stripFrontmatter(markdown) {
   );
 }
 
+async function fetchDocumentContent(document, signal) {
+  const markdownResponse = await fetch(document.path, { signal });
+  if (markdownResponse.ok) {
+    return {
+      format: "markdown",
+      content: stripFrontmatter(await markdownResponse.text()),
+    };
+  }
+
+  if (markdownResponse.status !== 404 || !document.path.toLowerCase().endsWith(".md")) {
+    throw new Error(`HTTP ${markdownResponse.status}`);
+  }
+
+  const htmlPath = document.path.replace(/\.md$/i, ".html");
+  const htmlResponse = await fetch(htmlPath, { signal });
+  if (!htmlResponse.ok) {
+    throw new Error(`HTTP ${markdownResponse.status}; HTML fallback ${htmlResponse.status}`);
+  }
+
+  return {
+    format: "jekyll-html",
+    content: await htmlResponse.text(),
+  };
+}
+
+function renderJekyllHtml(html) {
+  const parsedDocument = new DOMParser().parseFromString(html, "text/html");
+  const content = parsedDocument.querySelector(".markdown-body");
+  if (!content) {
+    throw new Error("Jekyll document body not found");
+  }
+
+  const siteHeading = content.firstElementChild;
+  if (siteHeading?.matches("h1") && siteHeading.querySelector("a[href]")) {
+    siteHeading.remove();
+  }
+
+  elements.reader.innerHTML = content.innerHTML;
+}
+
 function populateCategories() {
   const categories = [...new Set(state.documents.map((document) => document.category))];
 
@@ -114,12 +154,14 @@ async function loadDocument(document) {
   showReaderMessage("문서를 불러오는 중입니다…", document.description, "Loading");
 
   try {
-    const response = await fetch(document.path, { signal: controller.signal });
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
+    const loadedDocument = await fetchDocumentContent(document, controller.signal);
+    if (loadedDocument.format === "jekyll-html") {
+      renderJekyllHtml(loadedDocument.content);
+      window.document.title = `${document.title} — Project Reading Room`;
+      return;
     }
 
-    const markdown = stripFrontmatter(await response.text());
+    const markdown = loadedDocument.content;
     if (!window.marked || typeof window.marked.parse !== "function") {
       elements.reader.innerHTML = `
         <div class="reader-state">
