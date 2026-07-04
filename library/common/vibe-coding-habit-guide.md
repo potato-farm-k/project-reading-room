@@ -1,5 +1,5 @@
 ---
-title: 채팅 속 지식을 내 지식으로 바꾸는 바이브코딩 습관 가이드
+title: 바이브코딩 습관 가이드
 category: common
 source_repo: project-reading-room
 source_path: library/common/vibe-coding-habit-guide.md
@@ -8,7 +8,7 @@ last_reviewed: 2026-07-04
 print_friendly: true
 ---
 
-# 채팅 속 지식을 내 지식으로 바꾸는 바이브코딩 습관 가이드
+# 바이브코딩 습관 가이드
 
 ## 1. 이 문서의 목적
 
