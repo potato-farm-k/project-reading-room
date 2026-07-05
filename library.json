@@ -16,6 +16,14 @@
     "description": "원본 문서 선별부터 reading copy 반영과 검증까지 정리한 Reading Room 운영 가이드"
   },
   {
+    "id": "lao-gdd",
+    "title": "Living Aegis Origin GDD v0.20",
+    "category": "living-aegis-origin",
+    "path": "library/living-aegis-origin/gdd.md",
+    "type": "reading-copy",
+    "description": "LAO의 현재 게임 디자인, 세계관, Impact Warning, Art Direction, Simulation 기준과 Codex 작업 방향을 통합한 기준 문서"
+  },
+  {
     "id": "lao-glossary",
     "title": "Living Aegis Origin Glossary",
     "category": "living-aegis-origin",

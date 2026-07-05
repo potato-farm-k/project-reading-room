@@ -90,6 +90,7 @@ library/
     vibe-coding-habit-guide.md
     project-reading-room-document-flow.md
   living-aegis-origin/
+    gdd.md
     glossary.md
     sound-direction.md
     concept-art-prompt-pack.md
