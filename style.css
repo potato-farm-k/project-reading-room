@@ -424,6 +424,35 @@ select {
   background: #fafbfc;
 }
 
+.flow-diagram-section {
+  margin: 2.5rem 0;
+}
+
+.flow-diagram-section h2 {
+  margin: 0 0 1rem;
+}
+
+.flow-diagram {
+  margin: 0;
+}
+
+.flow-diagram img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: var(--white);
+}
+
+.flow-diagram figcaption {
+  margin-top: 0.65rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
 .root-index-summary {
   margin-bottom: 2rem !important;
   color: var(--muted);
@@ -683,6 +712,17 @@ select {
   .reader code {
     border-color: #aaa;
     background: #fff !important;
+  }
+
+  .flow-diagram-section,
+  .flow-diagram {
+    break-inside: avoid;
+  }
+
+  .flow-diagram img {
+    max-width: 100%;
+    border-color: #333;
+    break-inside: avoid;
   }
 
   .table-wrapper {

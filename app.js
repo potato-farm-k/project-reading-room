@@ -172,6 +172,18 @@ function renderRootIndex() {
     <div class="root-index">
       <p class="state-label">Root index</p>
       <h1>Reading Room 현황</h1>
+      <section class="flow-diagram-section">
+        <h2>문서 관리 플로우</h2>
+        <figure class="flow-diagram">
+          <img
+            src="assets/diagrams/project-reading-room-document-flow.png"
+            alt="Project Reading Room Document Flow diagram"
+          />
+          <figcaption>
+            Project Reading Room의 문서 유입, 원본 저장, reading copy 반영 흐름
+          </figcaption>
+        </figure>
+      </section>
       <p class="root-index-summary">등록 문서 수: <strong>${state.documents.length}</strong></p>
       ${
         sections ||

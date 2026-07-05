@@ -2,7 +2,7 @@
 
 `project-reading-room`은 여러 개인 프로젝트와 학습 문서 중 다시 읽을 가치가 있는 Markdown 문서를 선별해 보여주는 개인용 Reading Room입니다. 정적 HTML, CSS, JavaScript로만 구성되어 별도의 build step 없이 GitHub Pages에서 동작합니다.
 
-앱을 처음 열면 `library.json`을 기준으로 생성한 **Root Index / 현황** 화면이 표시됩니다. 이 화면에서 category별 문서의 표시 제목, 파일명, type, path와 description을 확인하고 문서 제목을 눌러 바로 열 수 있습니다. 좌측의 **Project Reading Room** 제목이나 문서 목록 최상단의 **현황**을 누르면 언제든 Root Index로 돌아갑니다.
+앱을 처음 열면 `library.json`을 기준으로 생성한 **Root Index / 현황** 화면이 표시됩니다. 화면 상단의 Project Reading Room Document Flow 다이어그램에서 문서 유입, 원본 저장과 reading copy 반영 흐름을 빠르게 확인할 수 있습니다. 이 화면에서 category별 문서의 표시 제목, 파일명, type, path와 description을 확인하고 문서 제목을 눌러 바로 열 수 있습니다. 좌측의 **Project Reading Room** 제목이나 문서 목록 최상단의 **현황**을 누르면 언제든 Root Index로 돌아갑니다.
 
 ## 문서 운영 원칙
 
