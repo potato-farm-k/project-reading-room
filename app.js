@@ -237,7 +237,7 @@ function renderDocumentList() {
         data-show-root-index
         ${state.selectedId === null ? 'aria-current="page"' : ""}
       >
-        <span class="document-title">현황</span>
+        <span class="document-title">Reading Room 현황</span>
         <span class="document-meta">Root index</span>
       </button>
     </li>
