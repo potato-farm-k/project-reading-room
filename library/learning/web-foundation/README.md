@@ -49,7 +49,7 @@ Reading Room 반영
 
 - [README.md](./README.md) — Track 소개와 운영 원칙
 - [LEARNING_PATH.md](./LEARNING_PATH.md) — 전체 학습 로드맵
-- [WEB-001-How-the-Web-Works.md](./WEB-001-How-the-Web-Works.md) — 웹의 기본 동작 과정
+- [WEB-001-How-the-Web-Works.md](./WEB-001-How-the-Web-Works.md) — Request와 Response로 이해하는 웹의 기본 동작 과정
 - [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) — 브라우저의 역할과 실행 흐름
 - [WEB-003-What-Is-HTML.md](./WEB-003-What-Is-HTML.md) — HTML의 역할과 웹 문서 구조
 - [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md) — 반복 확인할 Reference 목차
