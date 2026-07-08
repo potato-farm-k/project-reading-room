@@ -109,7 +109,7 @@
     "category": "learning",
     "path": "library/learning/web-foundation/WEB-003-What-Is-HTML.md",
     "type": "source",
-    "description": "HTML을 브라우저가 해석하는 웹 문서의 구조 언어로 이해하기 위한 Web Foundation 세 번째 Learning Guide"
+    "description": "HTML을 브라우저가 해석하는 웹 문서의 구조 언어이자 Markup의 한 흐름으로 이해하기 위한 Web Foundation 세 번째 Learning Guide"
   },
   {
     "id": "learning-web-foundation-reference-index",

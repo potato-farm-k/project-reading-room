@@ -18,7 +18,7 @@ print_friendly: true
 
 WEB-002에서는 브라우저를 웹 문서를 요청하고 해석하고 실행하는 Runtime이자 웹 애플리케이션 플랫폼으로 이해합니다.
 
-WEB-003에서는 HTML을 브라우저가 해석하는 웹 문서의 구조 언어로 이해합니다.
+WEB-003에서는 HTML을 브라우저가 해석하는 웹 문서의 구조 언어이자 Markup의 한 흐름으로 이해합니다.
 
 ## 학습 목적
 
@@ -51,7 +51,7 @@ Reading Room 반영
 - [LEARNING_PATH.md](./LEARNING_PATH.md) — 전체 학습 로드맵
 - [WEB-001-How-the-Web-Works.md](./WEB-001-How-the-Web-Works.md) — Request와 Response로 이해하는 웹의 기본 동작 과정
 - [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) — 브라우저의 역할, Runtime 개념과 실행 흐름
-- [WEB-003-What-Is-HTML.md](./WEB-003-What-Is-HTML.md) — HTML의 역할과 웹 문서 구조
+- [WEB-003-What-Is-HTML.md](./WEB-003-What-Is-HTML.md) — HTML의 역할, Markup과 웹 문서 구조
 - [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md) — 반복 확인할 Reference 목차
 
 ## 활용 프로젝트

@@ -10,28 +10,57 @@ print_friendly: true
 
 # WEB-003. What Is HTML
 
-HTML은 웹페이지에 글자를 쓰기 위한 문법만이 아닙니다. 브라우저가 해석할 수 있도록 웹 문서의 의미와 구조를 정의하는 마크업 언어입니다.
+HTML은 웹페이지에 글자를 쓰기 위한 문법만이 아닙니다. 사람이 문서를 더 잘 표현하고, 더 쉽게 공유하고, 컴퓨터가 더 잘 이해하도록 만들기 위한 문서 표현 방식의 진화 속에서 등장한 웹 문서용 Markup Language입니다.
 
 ## 1. 학습 목표
 
-- HTML이 웹 문서에서 맡는 역할을 설명합니다.
+- HTML이 왜 만들어졌는지 설명합니다.
+- Markup이 문서의 의미와 구조를 표시하는 방식이라는 점을 이해합니다.
 - 태그, 요소, 시작 태그, 종료 태그와 속성의 기본 의미를 구분합니다.
-- 제목, 문단, 링크, 이미지, 목록 같은 기본 요소가 문서 구조를 만든다는 점을 이해합니다.
+- Markdown, XML, YAML, Frontmatter가 HTML과 어떤 관계를 갖는지 큰 흐름을 이해합니다.
 - 브라우저가 HTML을 읽어 화면 구조를 만드는 흐름을 설명합니다.
 - HTML, CSS, JavaScript가 각각 구조, 모양, 동작을 맡는다는 관계를 이해합니다.
-- GitHub Pages 프로젝트에서 `index.html`이 어떤 출발점 역할을 하는지 연결합니다.
+- GitHub Pages와 Project Reading Room에서 HTML과 Markdown이 어떻게 연결되는지 이해합니다.
 
 ## 2. 왜 HTML이 필요한가
 
 웹은 서로 다른 컴퓨터와 브라우저에서 같은 문서를 읽고 연결하기 위해 만들어졌습니다. 그러려면 “이 문장은 제목이다”, “이 부분은 문단이다”, “이 글자는 다른 페이지로 가는 링크다”처럼 문서의 의미를 공통된 방식으로 표현해야 합니다.
 
-HTML은 이 문제를 해결합니다. HTML은 화면을 예쁘게 꾸미는 일을 중심으로 하지 않고, 문서 안의 정보가 무엇인지 구조로 표시합니다. 브라우저는 이 구조를 읽고 사용자에게 웹페이지로 보여줍니다.
+초기의 텍스트 파일은 글자만 저장했습니다. 하지만 사람들은 제목, 문단, 굵은 글씨, 링크, 이미지 같은 정보를 함께 표현하고 싶어 했습니다. 인쇄 편집자가 원고에 빨간 펜으로 표시를 남기던 관습을 Markup이라고 불렀고, 이 개념이 컴퓨터 문서에도 이어졌습니다.
+
+HTML은 이 문제를 웹에서 해결합니다. HTML은 화면을 예쁘게 꾸미는 일을 중심으로 하지 않고, 문서 안의 정보가 무엇인지 구조로 표시합니다. 브라우저는 이 구조를 읽고 사용자에게 웹페이지로 보여줍니다.
+
+문서 표현 방식은 다음처럼 발전해 왔다고 볼 수 있습니다.
+
+```text
+TXT
+  ↓
+Markup
+  ↓
+HTML
+  ↓
+XML
+  ↓
+Markdown
+  ↓
+YAML
+  ↓
+Frontmatter
+```
+
+이 순서는 “무조건 이 기술이 다음 기술을 대체했다”는 뜻이 아닙니다. 각 방식이 문서를 표현하고 공유하고 컴퓨터가 이해하도록 돕는 문제를 서로 다른 각도에서 풀어 왔다는 큰 흐름입니다.
 
 ## 3. 핵심 개념
 
 ### HTML
 
 HTML은 HyperText Markup Language의 줄임말입니다. HyperText는 문서가 링크로 서로 연결될 수 있다는 뜻이고, Markup은 문서의 부분에 의미를 표시한다는 뜻입니다.
+
+HTML은 문서를 어떻게 꾸밀지가 아니라 “무엇인지”, 즉 의미와 구조를 표현합니다.
+
+### Markup
+
+Markup은 문서의 각 부분이 어떤 의미를 갖는지 표시하는 방법입니다. 예를 들어 “이것은 제목이다”, “이것은 문단이다”, “이것은 링크다” 같은 정보를 문서 안에 남깁니다.
 
 ### 태그와 요소
 
@@ -65,6 +94,57 @@ HTML은 HyperText Markup Language의 줄임말입니다. HyperText는 문서가 
 ### Semantic HTML
 
 Semantic HTML은 요소를 단순한 상자처럼 쓰지 않고 의미에 맞게 사용하는 방식입니다. 예를 들어 제목은 `h1`, 문단은 `p`, 이동 링크는 `a`, 주요 내용 영역은 `main`처럼 표현합니다. 이렇게 쓰면 브라우저, 검색 엔진, 보조 기술이 문서 구조를 더 잘 이해할 수 있습니다.
+
+### Markdown
+
+Markdown은 사람이 빠르게 문서를 작성하도록 만든 가벼운 Markup입니다. HTML보다 읽고 쓰기 쉽고, 대부분의 경우 HTML로 변환된 뒤 브라우저에 표시됩니다.
+
+```markdown
+# 제목
+
+본문입니다.
+```
+
+```text
+Markdown
+  ↓
+HTML
+  ↓
+Browser
+```
+
+GitHub와 Project Reading Room이 Markdown을 사용하는 이유도 여기에 있습니다.
+
+### XML
+
+XML은 컴퓨터끼리 데이터를 설명하기 위한 Markup입니다.
+
+```xml
+<name>Kim</name>
+```
+
+HTML이 브라우저에 문서를 보여주기 위한 언어라면, XML은 데이터 표현에 더 가깝습니다. 과거에는 웹 서비스가 XML로 데이터를 많이 주고받았지만, 현재는 JSON이 많은 역할을 이어받았습니다.
+
+### YAML과 Frontmatter
+
+YAML은 사람이 읽기 쉬운 설정과 메타데이터 표현에 자주 쓰입니다.
+
+```yaml
+database:
+  mysql:
+    user: root
+```
+
+Markdown 문서 맨 위의 Frontmatter도 YAML 형식입니다.
+
+```yaml
+---
+title: WEB-003
+category: learning
+---
+```
+
+본문이 아니라 문서의 메타데이터를 저장하는 영역입니다. Project Reading Room의 Markdown 문서들도 이 frontmatter로 제목, category, source path 같은 관리 정보를 남깁니다.
 
 ### HTML, CSS, JavaScript의 관계
 
@@ -100,6 +180,16 @@ JavaScript로 상호작용 추가
 웹페이지 표시
 ```
 
+Project Reading Room처럼 Markdown을 사용하는 경우에는 한 단계가 더 있습니다.
+
+```text
+Markdown
+  ↓
+HTML로 변환
+  ↓
+Browser가 화면에 표시
+```
+
 아주 짧은 HTML 예시는 다음과 같습니다.
 
 ```html
@@ -113,10 +203,12 @@ JavaScript로 상호작용 추가
 ## 5. 자주 하는 오해
 
 - **HTML은 화면을 꾸미는 언어인가?** HTML의 핵심 역할은 구조와 의미입니다. 꾸미는 일은 주로 CSS가 맡습니다.
-- **HTML은 프로그래밍 언어인가?** HTML은 계산이나 조건문을 실행하는 언어가 아니라 문서를 표시하는 마크업 언어입니다.
+- **HTML은 프로그래밍 언어인가?** HTML은 계산이나 조건문을 실행하는 언어가 아니라 문서를 기술하는 Markup Language입니다.
+- **Markup은 HTML만 뜻하는가?** 아닙니다. Markdown과 XML도 Markup 계열로 볼 수 있습니다.
+- **Markdown은 웹 기술인가?** Markdown 자체는 글쓰기 기술에 가깝습니다. 하지만 HTML로 쉽게 변환할 수 있어 GitHub, 기술 문서, 블로그, Reading Room에서 널리 쓰입니다.
+- **YAML Frontmatter도 본문인가?** 아닙니다. Frontmatter는 문서 본문이 아니라 제목, category, source path 같은 메타데이터를 저장하는 영역입니다.
 - **태그를 많이 외우면 HTML을 잘하는가?** 처음에는 태그 목록보다 문서 구조를 어떻게 표현할지 이해하는 것이 더 중요합니다.
 - **`div`만 써도 되는가?** 화면은 만들 수 있지만 의미가 약해집니다. 가능한 경우 제목, 문단, 목록, 버튼, 링크처럼 의미가 있는 요소를 먼저 선택합니다.
-- **HTML 파일 하나만 있으면 충분한가?** 단순 문서는 가능하지만, 실제 프로젝트에서는 CSS, JavaScript, 이미지 같은 자원과 함께 동작하는 경우가 많습니다.
 
 ## 6. 프로젝트 적용 예시
 
@@ -132,22 +224,37 @@ Living Aegis Origin 같은 Canvas 2D 기반 프로젝트에서도 HTML은 출발
 
 공공데이터 기반 서비스에서는 검색창, 검색 버튼, 결과 목록, 상세 정보 영역 같은 화면 구조를 HTML이 표현합니다. API 데이터가 오기 전에도 “어디에 입력하고, 어디에 결과를 보여줄지”라는 구조가 먼저 필요합니다.
 
+### Project Reading Room
+
+Project Reading Room의 원본 문서는 Markdown으로 작성됩니다. Markdown 상단의 frontmatter는 YAML 메타데이터이고, 브라우저는 최종적으로 Markdown이 변환된 HTML을 화면에 표시합니다.
+
+```text
+Markdown + YAML Frontmatter
+  ↓
+HTML
+  ↓
+Browser
+```
+
 ## 7. 실습 과제
 
 1. 자주 보는 웹페이지 하나를 열고 제목, 문단, 링크, 이미지, 버튼처럼 보이는 부분을 찾아봅니다.
 2. 개발자 도구의 Elements 탭에서 `h1`, `p`, `a`, `img`, `button` 요소가 있는지 확인합니다.
 3. 간단한 HTML 조각을 만들고 `h1`, `p`, `button` 요소를 하나씩 넣어봅니다.
-4. GitHub Pages 프로젝트의 `index.html`에서 화면의 큰 영역들이 어떤 요소로 나뉘어 있는지 읽어봅니다.
-5. 의미가 약한 `div`와 의미가 있는 `main`, `section`, `button`, `a`의 차이를 한 문장으로 정리해 봅니다.
+4. Markdown 문서 하나를 열고 제목, 목록, 링크가 HTML의 어떤 요소로 바뀔지 예상해 봅니다.
+5. Project Reading Room 문서의 frontmatter를 보고 본문과 메타데이터를 구분해 봅니다.
+6. 의미가 약한 `div`와 의미가 있는 `main`, `section`, `button`, `a`의 차이를 한 문장으로 정리해 봅니다.
 
 ## 8. 다음 문서와의 연결
 
 - WEB-004에서는 HTML 구조에 모양과 배치를 입히는 CSS를 학습합니다.
 - WEB-005에서는 HTML 요소에 동작과 상태 변화를 더하는 JavaScript를 학습합니다.
 - WEB-006에서는 브라우저가 HTML, CSS, JavaScript를 요청하고 응답받는 HTTP 흐름을 더 자세히 봅니다.
+- Markdown, XML, YAML과 Frontmatter는 이후 문서 관리 또는 Reference 문서에서 더 자세히 분리할 수 있습니다.
 
 ## 9. 변경 이력 및 학습 메모
 
 | 날짜 | 변경 내용 | 후속 질문 |
 | --- | --- | --- |
 | 2026-07-08 | WEB-003 초기 Learning Guide 작성 | 의미 있는 HTML 구조를 쓰면 브라우저와 보조 기술은 어떤 정보를 더 잘 이해하는가? |
+| 2026-07-08 | v2 교체본 반영: 문서 진화 관점, Markup, Markdown, XML, YAML과 Frontmatter 비교 추가 | Markdown이 HTML로 변환될 때 semantic HTML 구조는 어디까지 보존되는가? |
