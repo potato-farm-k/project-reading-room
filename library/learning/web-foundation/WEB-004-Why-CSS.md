@@ -168,7 +168,7 @@ Living Aegis Origin에서 Canvas 안의 그림은 JavaScript가 그릴 수 있�
 
 ## 8. 다음 문서와의 연결
 
-- WEB-005에서는 JavaScript가 웹페이지에 상태, 동작, 상호작용을 더하는 방식을 학습합니다.
+- [WEB-005](./WEB-005-Why-JavaScript.md)에서는 JavaScript가 웹페이지에 상태, 동작, 상호작용을 더하는 방식을 학습합니다.
 - WEB-006에서는 HTML, CSS, JavaScript 파일이 HTTP 요청과 응답으로 어떻게 전달되는지 더 자세히 봅니다.
 - Box model, layout, responsive design은 이후 프로젝트 경험이 쌓일 때 별도 Reference나 심화 문서로 분리할 수 있습니다.
 
