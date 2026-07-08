@@ -4,7 +4,7 @@ category: living-aegis-origin
 source_repo: living-aegis-origin
 source_path: docs/GDD.md
 copy_type: reading-copy
-last_reviewed: 2026-07-05
+last_reviewed: 2026-07-08
 print_friendly: true
 ---
 
@@ -198,6 +198,94 @@ Source
 
 > ⚠️ **현재 리스크**: prototype-07에서 Impact Warning phase가 아직 안정화되지 않았음. Surface Occluded에서 Impact Warning을 건너뛰고 바로 Impact로 이어지는 현상 발생 중.
 
+### Threat Type Draft v0.1
+
+Living Aegis Origin의 위협 유형은 현재 다음 3계열로 정리한다.
+
+1. Missile-type Threat
+2. Beam/Charge-type Threat
+3. Mass/Object-type Threat
+
+이 분류는 최종 enemy taxonomy가 아니라, 플레이어가 위협을 어떻게 인식하고 대응하는지 정리하기 위한 working draft다.
+
+#### Missile-type Threat — Main Threat
+
+Missile-type Threat은 현재 Living Aegis Origin의 메인 위협 문법이다. 지구 또는 지구 방향 source에서 출발해 달을 향해 접근하며, 플레이어는 이를 감지하고 추적한 뒤 요격한다.
+
+특징:
+
+- source가 달 정면 방향에 가까우면 boost와 trajectory가 거의 직선으로 보인다.
+- source가 위, 아래, 옆으로 어긋나면 boost 이후 trajectory가 달 방향으로 휘어져 보인다.
+- 달 근처 마지막 구간에서는 Lunar Defense Zone으로 수렴한다.
+- Impact Warning Corridor의 핵심 대상이다.
+
+역할과 우선순위:
+
+- 플레이어가 가장 먼저 배우는 기본 방어 문법이다.
+- "다가오는 것을 감지하고 요격한다"는 LAO의 핵심 감정을 담당한다.
+- 현재 prototype과 simulator 검증의 P0 위협으로 둔다.
+
+주의:
+
+- 현대 군사 미사일 방어 simulator처럼 보이지 않도록 한다.
+- Art Direction과 Worldbuilding 단계에서 LAO식 시각 정체성과 명칭을 보강할 수 있다.
+
+#### Beam/Charge-type Threat — Pre-Fire Intercept Threat
+
+Beam/Charge-type Threat은 발사된 빔을 보고 막는 위협이 아니다. 발사 전 충전 또는 조준 상태를 감지하고 source를 요격하거나 차단하는 위협으로 둔다.
+
+특징:
+
+- boost가 없다.
+- trajectory curve가 거의 없다.
+- line of sight를 중심으로 판단한다.
+- 경고는 발사 전 충전, 조준선, 예측 신호로 처리한다.
+- 줌 또는 관측 모드와 결합하기 좋다.
+- 미사일형 또는 운석형 source와 융합할 수 있다.
+
+역할과 우선순위:
+
+- 기본 요격 문법 이후 추가하는 관측과 집중 중심의 위협이다.
+- "곧 쏠 것이다. 늦기 전에 끊어야 한다"는 긴장감을 담당한다.
+- 현재는 P1 변주로 보류하며 구현 대상으로 확정하지 않는다.
+
+주의:
+
+- 초반 메인 위협으로 사용하면 게임이 요격 방어보다 sniping 중심으로 기울 수 있다.
+- 광속 공격의 발사 후 대응 문제를 피하도록 발사 전 충전 또는 조준 source 차단을 중심으로 다룬다.
+
+#### Mass/Object-type Threat — Heavy Special Threat
+
+Mass/Object-type Threat은 느리지만 무겁고 한 번에 제거되지 않는 특수 위협이다. Missile-type Threat의 반복을 깨고 압박감과 우선순위 판단을 만드는 변주로 사용할 수 있다.
+
+특징:
+
+- 달 중력 영향이 더 크게 보일 수 있다.
+- 아래로 떨어지는 느낌이 일부 자연스럽다.
+- 단순 요격보다 약점 공격, 반복 타격, 줌 조준과 잘 맞는다.
+- 한 번에 제거되지 않는 압박형 위협으로 사용할 수 있다.
+
+역할과 우선순위:
+
+- 느리지만 반드시 막아야 하는 무거운 압박을 담당한다.
+- 현재는 P2 특수 위협으로 보류하며 구현 대상으로 확정하지 않는다.
+
+주의:
+
+- 메인 위협으로 사용하면 LAO의 정면 돌진감이 약해질 수 있다.
+- 단순 운석 방어 게임처럼 보이지 않도록 한다.
+- 자연 운석보다 인공적으로 유도된 mass threat, orbital debris, bio-mechanical fragment 같은 해석이 LAO 정체성에 더 적합하다.
+
+#### Current Priority
+
+| 우선순위 | 위협 계열 | 현재 판단 |
+|---------|----------|----------|
+| P0 | Missile-type Threat | source, boost, trajectory, Lunar Defense Zone, Impact Warning Corridor 검증의 중심이 되는 main threat |
+| P1 | Beam/Charge-type Threat | 기본 요격 문법 이후 검토할 관측, 줌, 충전 차단형 변주. 발사 전 source 차단 중심 |
+| P2 | Mass/Object-type Threat | 약점 공격, 반복 타격, 줌 활용에 적합한 느리고 무거운 special threat |
+
+현재 Living Aegis Origin의 핵심 위협 문법은 Missile-type Threat으로 유지한다. Beam/Charge-type Threat과 Mass/Object-type Threat은 메인 위협이 아니라 후속 변주 또는 특수 위협으로 보류한다.
+
 ### Prototype 검증 이력
 
 | Prototype | 검증 목표 | 현재 판단 |
@@ -255,6 +343,10 @@ Source
 | 5 | 부분 각성 | 생체 병기가 반쯤 깨어난 방패처럼 반응 |
 | 6 | 첫 방어 성공 | 완전하지 않은 상태로 간신히 막아내는 첫 감각 |
 | 7 | 본격 방어전 예고 | 동시다발 위협과 완성형 생체 병기는 이후 검토 |
+
+### 위협 정체성 방향
+
+현재 LAO의 핵심 위협 정체성은 Missile-type Threat을 중심으로 한다. 이는 "지구 방향에서 달로 다가오는 위협을 고독한 방어자가 막는다"는 첫 번째 정체성과 가장 잘 맞는다. Beam/Charge-type Threat과 Mass/Object-type Threat은 세계관 확장과 전투 변주를 위한 후속 후보로 보류한다.
 
 ### 현재 확정하지 않을 것 (의도적 보류)
 

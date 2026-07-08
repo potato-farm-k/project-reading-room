@@ -21,7 +21,15 @@
     "category": "living-aegis-origin",
     "path": "library/living-aegis-origin/gdd.md",
     "type": "reading-copy",
-    "description": "LAO의 현재 게임 디자인, 세계관, Impact Warning, Art Direction, Simulation 기준과 Codex 작업 방향을 통합한 기준 문서"
+    "description": "LAO의 게임 디자인, Impact Warning과 Threat Type Draft(Missile-type, Beam/Charge-type, Mass/Object-type)를 포함한 통합 기준 문서"
+  },
+  {
+    "id": "lao-decision-log",
+    "title": "Living Aegis Origin Decision Log",
+    "category": "living-aegis-origin",
+    "path": "library/living-aegis-origin/decision-log.md",
+    "type": "reading-copy",
+    "description": "LAO의 주요 설계 결정과 Threat Type Classification 판단 이유를 날짜별로 기록한 문서"
   },
   {
     "id": "lao-glossary",

@@ -91,6 +91,7 @@ library/
     project-reading-room-document-flow.md
   living-aegis-origin/
     gdd.md
+    decision-log.md
     glossary.md
     sound-direction.md
     concept-art-prompt-pack.md
