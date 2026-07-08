@@ -16,18 +16,18 @@ print_friendly: true
 
 ## 초기 학습 로드맵
 
-| 번호 | 주제 | 학습 질문 | 상태 |
-| --- | --- | --- | --- |
-| WEB-001 | 웹은 어떻게 동작하는가 | 주소를 입력한 뒤 화면이 나타날 때까지 무슨 일이 일어나는가? | `active` |
-| WEB-002 | 브라우저 | 브라우저는 문서와 코드를 어떻게 읽고 실행하는가? | `planned` |
-| WEB-003 | HTML | 웹 문서의 구조와 의미를 어떻게 표현하는가? | `planned` |
-| WEB-004 | CSS | 구조와 표현을 왜 분리하며 화면은 어떻게 배치되는가? | `planned` |
-| WEB-005 | JavaScript | 웹 페이지에 상태와 동작을 어떻게 더하는가? | `planned` |
-| WEB-006 | HTTP | Client와 Server는 어떤 규칙으로 요청과 응답을 주고받는가? | `planned` |
-| WEB-007 | REST API | 웹 자원과 작업을 일관된 인터페이스로 어떻게 표현하는가? | `planned` |
-| WEB-008 | CORS | 브라우저는 왜 출처가 다른 요청을 제한하는가? | `planned` |
-| WEB-009 | Serverless | 서버를 직접 운영하지 않고 코드를 실행한다는 것은 무엇인가? | `planned` |
-| WEB-010 | GitHub Pages Architecture | 정적 파일은 GitHub Pages에서 어떻게 빌드되고 배포되는가? | `planned` |
+| 번호 | 주제 | 학습 질문 | 상태 | 문서 |
+| --- | --- | --- | --- | --- |
+| WEB-001 | 웹은 어떻게 동작하는가 | 주소를 입력한 뒤 화면이 나타날 때까지 무슨 일이 일어나는가? | `active` | [WEB-001-How-the-Web-Works.md](./WEB-001-How-the-Web-Works.md) |
+| WEB-002 | 브라우저 | 브라우저는 문서와 코드를 어떻게 읽고 실행하는가? | `active` | [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) |
+| WEB-003 | HTML | 웹 문서의 구조와 의미를 어떻게 표현하는가? | `planned` | 학습 시 생성 |
+| WEB-004 | CSS | 구조와 표현을 왜 분리하며 화면은 어떻게 배치되는가? | `planned` | 학습 시 생성 |
+| WEB-005 | JavaScript | 웹 페이지에 상태와 동작을 어떻게 더하는가? | `planned` | 학습 시 생성 |
+| WEB-006 | HTTP | Client와 Server는 어떤 규칙으로 요청과 응답을 주고받는가? | `planned` | 학습 시 생성 |
+| WEB-007 | REST API | 웹 자원과 작업을 일관된 인터페이스로 어떻게 표현하는가? | `planned` | 학습 시 생성 |
+| WEB-008 | CORS | 브라우저는 왜 출처가 다른 요청을 제한하는가? | `planned` | 학습 시 생성 |
+| WEB-009 | Serverless | 서버를 직접 운영하지 않고 코드를 실행한다는 것은 무엇인가? | `planned` | 학습 시 생성 |
+| WEB-010 | GitHub Pages Architecture | 정적 파일은 GitHub Pages에서 어떻게 빌드되고 배포되는가? | `planned` | 학습 시 생성 |
 
 상태값은 이 문서에서만 사람이 읽는 진행 표시로 사용합니다.
 
@@ -38,8 +38,8 @@ print_friendly: true
 
 ## 진행 원칙
 
-- 현재 파일이 있는 Guide는 `WEB-001`뿐입니다.
-- `WEB-002` 이후 문서는 해당 주제를 실제로 학습할 때 만듭니다.
+- 현재 파일이 있는 Guide는 `WEB-001`과 `WEB-002`입니다.
+- `WEB-003` 이후 문서는 해당 주제를 실제로 학습할 때 만듭니다.
 - 모든 문서를 한 번에 만들지 않습니다.
 - 학습과 프로젝트 경험이 쌓일 때마다 필요한 문서를 추가하거나 수정합니다.
 - 프로젝트에서 먼저 만난 주제가 있다면 순서를 조정할 수 있습니다.
@@ -53,4 +53,4 @@ print_friendly: true
 
 ## 다음 학습
 
-[WEB-001 — How the Web Works](./WEB-001-How-the-Web-Works.md)에서 Client, Server, Browser, URL, DNS와 HTTP가 하나의 요청 과정에서 어떻게 연결되는지 살펴봅니다.
+[WEB-002 — What Is a Browser](./WEB-002-What-Is-a-Browser.md)에서 Browser가 웹 문서를 요청하고 해석하고 실행하는 방식을 살펴봅니다.

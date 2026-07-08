@@ -16,6 +16,8 @@ print_friendly: true
 
 이 Track은 한 번 작성하고 끝나는 문서가 아니라, ChatGPT와의 학습 대화 및 실제 프로젝트 경험을 통해 계속 업데이트하는 개인용 교재입니다.
 
+WEB-002에서는 브라우저를 웹 문서를 요청하고 해석하고 실행하는 환경으로 이해합니다.
+
 ## 학습 목적
 
 - 브라우저와 서버 사이에서 일어나는 일을 설명할 수 있게 됩니다.
@@ -46,6 +48,7 @@ Reading Room 반영
 - [README.md](./README.md) — Track 소개와 운영 원칙
 - [LEARNING_PATH.md](./LEARNING_PATH.md) — 전체 학습 로드맵
 - [WEB-001-How-the-Web-Works.md](./WEB-001-How-the-Web-Works.md) — 웹의 기본 동작 과정
+- [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) — 브라우저의 역할과 실행 흐름
 - [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md) — 반복 확인할 Reference 목차
 
 ## 활용 프로젝트

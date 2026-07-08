@@ -96,6 +96,14 @@
     "description": "Client, Server, Browser, URL, DNS와 HTTP를 통해 웹의 기본 동작 과정을 이해하는 첫 Guide"
   },
   {
+    "id": "learning-web-foundation-web-002-what-is-a-browser",
+    "title": "WEB-002. What Is a Browser",
+    "category": "learning",
+    "path": "library/learning/web-foundation/WEB-002-What-Is-a-Browser.md",
+    "type": "source",
+    "description": "브라우저가 웹 문서를 요청하고 해석하고 실행하는 방식을 이해하기 위한 Web Foundation 두 번째 Learning Guide"
+  },
+  {
     "id": "learning-web-foundation-reference-index",
     "title": "Web Foundation Reference Index",
     "category": "learning",

@@ -37,3 +37,4 @@ print_friendly: true
 - [Web Foundation Learning Track](./README.md)
 - [Web Foundation Learning Path](./LEARNING_PATH.md)
 - [WEB-001 — How the Web Works](./WEB-001-How-the-Web-Works.md)
+- [WEB-002 — What Is a Browser](./WEB-002-What-Is-a-Browser.md)

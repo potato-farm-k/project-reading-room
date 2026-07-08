@@ -103,6 +103,7 @@ library/
       README.md
       LEARNING_PATH.md
       WEB-001-How-the-Web-Works.md
+      WEB-002-What-Is-a-Browser.md
       WEB_REFERENCE_INDEX.md
 ```
 
