@@ -21,7 +21,7 @@ print_friendly: true
 | WEB-001 | 웹은 어떻게 동작하는가 | Browser의 Request와 Server의 Response가 어떻게 하나의 웹페이지로 이어지는가? | `active` | [WEB-001-How-the-Web-Works.md](./WEB-001-How-the-Web-Works.md) |
 | WEB-002 | 브라우저 | 브라우저는 문서와 코드를 어떻게 읽고 실행하며 애플리케이션 플랫폼으로 동작하는가? | `active` | [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) |
 | WEB-003 | HTML | HTML은 Markup으로 웹 문서의 구조와 의미를 어떻게 표현하는가? | `active` | [WEB-003-What-Is-HTML.md](./WEB-003-What-Is-HTML.md) |
-| WEB-004 | CSS | 구조와 표현을 왜 분리하며 화면은 어떻게 배치되는가? | `planned` | 학습 시 생성 |
+| WEB-004 | CSS | 구조와 표현을 왜 분리하며 화면은 어떻게 배치되는가? | `active` | [WEB-004-Why-CSS.md](./WEB-004-Why-CSS.md) |
 | WEB-005 | JavaScript | 웹 페이지에 상태와 동작을 어떻게 더하는가? | `planned` | 학습 시 생성 |
 | WEB-006 | HTTP | Client와 Server는 어떤 규칙으로 요청과 응답을 주고받는가? | `planned` | 학습 시 생성 |
 | WEB-007 | REST API | 웹 자원과 작업을 일관된 인터페이스로 어떻게 표현하는가? | `planned` | 학습 시 생성 |
@@ -38,8 +38,8 @@ print_friendly: true
 
 ## 진행 원칙
 
-- 현재 파일이 있는 Guide는 `WEB-001`, `WEB-002`, `WEB-003`입니다.
-- `WEB-004` 이후 문서는 해당 주제를 실제로 학습할 때 만듭니다.
+- 현재 파일이 있는 Guide는 `WEB-001`, `WEB-002`, `WEB-003`, `WEB-004`입니다.
+- `WEB-005` 이후 문서는 해당 주제를 실제로 학습할 때 만듭니다.
 - 모든 문서를 한 번에 만들지 않습니다.
 - 학습과 프로젝트 경험이 쌓일 때마다 필요한 문서를 추가하거나 수정합니다.
 - 프로젝트에서 먼저 만난 주제가 있다면 순서를 조정할 수 있습니다.
@@ -53,4 +53,4 @@ print_friendly: true
 
 ## 다음 학습
 
-[WEB-003. What Is HTML](./WEB-003-What-Is-HTML.md)에서 HTML이 브라우저가 해석하는 웹 문서의 구조 언어로 어떻게 쓰이는지 살펴봅니다.
+[WEB-004. Why CSS](./WEB-004-Why-CSS.md)에서 CSS가 HTML 구조 위에 시각적 표현과 배치를 입히는 방식을 살펴봅니다.

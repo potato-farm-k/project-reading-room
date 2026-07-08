@@ -26,6 +26,7 @@ print_friendly: true
 | CORS Headers | 다른 출처의 요청을 허용하는 응답 기준 | 계획 |
 | Markup | HTML, Markdown, XML처럼 문서 의미를 표시하는 방식 | 계획 |
 | Frontmatter | Markdown 문서 상단의 YAML 메타데이터 | 계획 |
+| CSS | HTML 구조에 표현과 배치를 적용하는 스타일 언어 | 계획 |
 
 ## 사용 원칙
 
@@ -41,3 +42,4 @@ print_friendly: true
 - [WEB-001. How the Web Works](./WEB-001-How-the-Web-Works.md)
 - [WEB-002. What Is a Browser](./WEB-002-What-Is-a-Browser.md)
 - [WEB-003. What Is HTML](./WEB-003-What-Is-HTML.md)
+- [WEB-004. Why CSS](./WEB-004-Why-CSS.md)

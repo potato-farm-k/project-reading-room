@@ -112,6 +112,14 @@
     "description": "HTML을 브라우저가 해석하는 웹 문서의 구조 언어이자 Markup의 한 흐름으로 이해하기 위한 Web Foundation 세 번째 Learning Guide"
   },
   {
+    "id": "learning-web-foundation-web-004-why-css",
+    "title": "WEB-004. Why CSS",
+    "category": "learning",
+    "path": "library/learning/web-foundation/WEB-004-Why-CSS.md",
+    "type": "source",
+    "description": "CSS가 왜 필요하며 HTML 문서에 시각적 표현과 배치를 적용하는지 이해하기 위한 Web Foundation 네 번째 Learning Guide"
+  },
+  {
     "id": "learning-web-foundation-reference-index",
     "title": "Web Foundation Reference Index",
     "category": "learning",

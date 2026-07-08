@@ -105,6 +105,7 @@ library/
       WEB-001-How-the-Web-Works.md
       WEB-002-What-Is-a-Browser.md
       WEB-003-What-Is-HTML.md
+      WEB-004-Why-CSS.md
       WEB_REFERENCE_INDEX.md
 ```
 
