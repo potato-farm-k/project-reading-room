@@ -98,7 +98,15 @@ library/
   potato-day/
     README.md
     SPRITE_LAB.md
+  learning/
+    web-foundation/
+      README.md
+      LEARNING_PATH.md
+      WEB-001-How-the-Web-Works.md
+      WEB_REFERENCE_INDEX.md
 ```
+
+Learning Track 문서는 `library/learning/[track-name]/` 아래에 둘 수 있습니다. **Web Foundation**은 웹의 동작 원리를 처음부터 체계적으로 이해하기 위한 첫 번째 Learning Track입니다.
 
 각 Markdown 파일에는 `title`, `category`, `source_repo`, `source_path`, `copy_type`, `last_reviewed`, `print_friendly`를 기록하는 간단한 YAML frontmatter가 있습니다. frontmatter는 문서 자체를 관리하기 위한 메모이며 화면 목록의 기준이 아닙니다. 앱은 이를 해석하지 않고 본문 렌더링 전에 숨깁니다.
 
