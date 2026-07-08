@@ -24,6 +24,8 @@ print_friendly: true
 
 ## 3. 핵심 개념
 
+주소창에 URL을 입력하면 Browser가 Client 역할을 맡아 DNS로 Server의 주소를 찾고, HTTP로 자원을 요청합니다. Server가 HTTP 응답을 보내면 Browser가 이를 해석해 사용자에게 보여줍니다. 아래 개념은 이 한 흐름 안에서 서로 연결됩니다.
+
 ### 웹
 
 인터넷 위에서 URL과 HTTP를 사용해 문서와 데이터를 연결하고 주고받는 시스템입니다. 인터넷은 네트워크 기반이고, 웹은 그 기반 위에서 동작하는 서비스 중 하나입니다.
@@ -69,6 +71,16 @@ Client가 무엇을 원하는지 요청하고 Server가 결과와 상태를 응�
 5. Browser가 응답의 상태와 MIME Type을 확인합니다.
 6. Browser가 받은 문서와 연결 자원을 해석해 화면을 구성합니다.
 
+```text
+사용자
+  ↓ URL 입력
+Browser(Client)
+  ↓ DNS로 서버 주소 확인
+Server
+  ↕ HTTP 요청과 응답
+Browser가 응답을 해석해 화면 구성
+```
+
 실제 환경에는 캐시, TLS, 프록시, CDN과 여러 추가 요청이 포함될 수 있습니다. 이번 문서에서는 전체 흐름의 뼈대만 다룹니다.
 
 HTML, CSS, JavaScript는 이후 문서에서 별도로 다룹니다.
@@ -89,11 +101,11 @@ GitHub Pages URL을 열면 Browser가 배포 서버에서 HTML, CSS, JavaScript�
 
 ### Living Aegis Origin
 
-Prototype과 Simulator를 웹에서 실행할 때 Browser는 JavaScript를 실행하는 Client입니다. 로컬 개발 서버와 GitHub Pages의 host가 다르면 URL과 자원 경로의 기준도 달라집니다.
+Canvas 2D 기반 Prototype과 Simulator도 Browser가 HTML, CSS, JavaScript 파일을 받아 실행하는 웹 애플리케이션입니다. 로컬 개발 서버와 GitHub Pages의 host가 다르면 URL과 자원 경로의 기준도 달라집니다.
 
 ### 공공데이터 기반 서비스
 
-Browser가 공공 API Server에 HTTP 요청을 보내 JSON 데이터를 받을 수 있습니다. 이때 API URL, method, status code, CORS 정책을 함께 이해해야 문제를 진단할 수 있습니다.
+Browser 또는 별도 Server가 외부 공공 API에 HTTP 요청을 보내 JSON 데이터를 받을 수 있습니다. 이때 API URL, method, status code, CORS 정책을 함께 이해해야 문제를 진단할 수 있습니다.
 
 ## 7. 실습 과제
 
@@ -113,3 +125,4 @@ Browser가 공공 API Server에 HTTP 요청을 보내 JSON 데이터를 받을 �
 | 날짜 | 변경 내용 | 후속 질문 |
 | --- | --- | --- |
 | 2026-07-08 | WEB-001 초기 초안 작성 | Browser가 HTML을 받은 뒤 추가 자원을 찾고 요청하는 순서는 어떻게 결정되는가? |
+| 2026-07-08 | Client, Server, Browser, URL, DNS, HTTP의 연결 흐름과 프로젝트 예시 보강 | DNS 조회와 HTTP 요청 사이에서 연결은 어떻게 만들어지는가? |
