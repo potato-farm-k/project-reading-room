@@ -19,7 +19,7 @@ print_friendly: true
 | 번호 | 주제 | 학습 질문 | 상태 | 문서 |
 | --- | --- | --- | --- | --- |
 | WEB-001 | 웹은 어떻게 동작하는가 | Browser의 Request와 Server의 Response가 어떻게 하나의 웹페이지로 이어지는가? | `active` | [WEB-001-How-the-Web-Works.md](./WEB-001-How-the-Web-Works.md) |
-| WEB-002 | 브라우저 | 브라우저는 문서와 코드를 어떻게 읽고 실행하는가? | `active` | [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) |
+| WEB-002 | 브라우저 | 브라우저는 문서와 코드를 어떻게 읽고 실행하며 애플리케이션 플랫폼으로 동작하는가? | `active` | [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) |
 | WEB-003 | HTML | 웹 문서의 구조와 의미를 어떻게 표현하는가? | `active` | [WEB-003-What-Is-HTML.md](./WEB-003-What-Is-HTML.md) |
 | WEB-004 | CSS | 구조와 표현을 왜 분리하며 화면은 어떻게 배치되는가? | `planned` | 학습 시 생성 |
 | WEB-005 | JavaScript | 웹 페이지에 상태와 동작을 어떻게 더하는가? | `planned` | 학습 시 생성 |

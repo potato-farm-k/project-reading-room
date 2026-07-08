@@ -101,7 +101,7 @@
     "category": "learning",
     "path": "library/learning/web-foundation/WEB-002-What-Is-a-Browser.md",
     "type": "source",
-    "description": "브라우저가 웹 문서를 요청하고 해석하고 실행하는 방식을 이해하기 위한 Web Foundation 두 번째 Learning Guide"
+    "description": "브라우저가 웹 문서를 요청·해석·실행하고 Runtime 및 애플리케이션 플랫폼으로 동작하는 방식을 이해하기 위한 Web Foundation 두 번째 Learning Guide"
   },
   {
     "id": "learning-web-foundation-web-003-what-is-html",
