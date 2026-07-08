@@ -104,6 +104,14 @@
     "description": "브라우저가 웹 문서를 요청하고 해석하고 실행하는 방식을 이해하기 위한 Web Foundation 두 번째 Learning Guide"
   },
   {
+    "id": "learning-web-foundation-web-003-what-is-html",
+    "title": "WEB-003. What Is HTML",
+    "category": "learning",
+    "path": "library/learning/web-foundation/WEB-003-What-Is-HTML.md",
+    "type": "source",
+    "description": "HTML을 브라우저가 해석하는 웹 문서의 구조 언어로 이해하기 위한 Web Foundation 세 번째 Learning Guide"
+  },
+  {
     "id": "learning-web-foundation-reference-index",
     "title": "Web Foundation Reference Index",
     "category": "learning",

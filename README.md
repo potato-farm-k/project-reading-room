@@ -104,6 +104,7 @@ library/
       LEARNING_PATH.md
       WEB-001-How-the-Web-Works.md
       WEB-002-What-Is-a-Browser.md
+      WEB-003-What-Is-HTML.md
       WEB_REFERENCE_INDEX.md
 ```
 
