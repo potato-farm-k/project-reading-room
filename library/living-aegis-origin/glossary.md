@@ -4,7 +4,7 @@ category: living-aegis-origin
 source_repo: living-aegis-origin
 source_path: docs/GLOSSARY.md
 copy_type: reading-copy
-last_reviewed: 2026-07-04
+last_reviewed: 2026-07-09
 print_friendly: true
 ---
 
@@ -130,11 +130,13 @@ simulator
 | --------------------------- | --------------- | ---------------------------------------- | ----- | -------------------------------------------------- |
 | Impact Warning              | 충돌 임박 경고        | 마지막 방어 선택 구간                             | 확정    | Game Designer, Simulation Director, Codex Director |
 | Impact Warning Corridor     | 경고가 발생하는 공간 구간  | 위협이 Lunar Defense Zone에 수렴하는 마지막 접근 통로   | 후보    | Simulation Director, Game Designer                 |
-| Visual Contact              | 시각적 접촉          | 위협이 시야 안에 있고 occlusion이 없는 상태            | 확정    | Game Designer, Simulation Director                 |
-| Surface Occluded            | 표면에 가려짐         | line of sight가 달 표면/ridge에 막힌 상태         | 확정    | Simulation Director, Codex Director                |
-| Off-screen                  | 화면 밖            | 위협이 현재 화면 밖에 있는 상태                       | 확정    | Game Designer, Codex Director                      |
+| Visual Contact              | 시각적 접촉          | 위협이 시야 안에 있고 occlusion이 없는 P0 핵심 상태       | 확정    | Game Designer, Simulation Director                 |
+| Surface Occluded            | 표면에 가려짐         | line of sight가 달 표면/ridge/구조물에 막힌 상태. P0 핵심 상태는 아님 | 후속 검토 | Simulation Director, Codex Director                |
+| Off-screen                  | 화면 밖            | camera pitch / view direction 때문에 위협이 화면 밖에 있는 P0 필요 상태 | 확정    | Game Designer, Codex Director                      |
 | Threat On Screen            | 위협 표시가 화면 안에 있음 | marker 또는 projection이 화면 안에 표시되는 상태      | 후보    | Simulation Director                                |
-| Predicted Contact           | 예측 접촉           | 아직 보이지 않지만 경고/궤적 예측 가능한 상태               | 후보    | Simulation Director                                |
+| Predicted Contact           | 예측 접촉           | Visual Contact와 혼동될 수 있어 P0에서는 사용하지 않는 용어 | 후속 검토 | Simulation Director                                |
+| Predicted Impact            | 예측 충돌           | trajectory / warning model상 Impact 가능성이 예측되는 후보 | 후속 검토 | Simulation Director, Game Designer                 |
+| Incoming Prediction         | 접근 예측           | 위협 접근 중임을 알리는 예측 경고 후보                  | 후속 검토 | Simulation Director, Game Designer                 |
 | Lock Ready                  | 조준 가능 상태        | Visual Contact + crosshair 정렬로 발사 가능한 상태 | 확정    | Game Designer, Codex Director                      |
 | Intercept                   | 요격              | 위협을 방어/격추하는 결과                           | 확정    | Game Designer                                      |
 | Lunar Defense Zone          | 달 방어 구역         | 플레이어가 방어해야 하는 달 표면 구역                    | 확정    | Game Designer, Art Director, Simulation Director   |
@@ -240,7 +242,7 @@ Impact Warning Corridor는 UI 경고가 아니라 공간상의 마지막 접근 
 대상을 눈으로 확인한 상태.
 
 LAO에서의 의미:
-위협이 camera view 안에 있고, 달 표면이나 ridge에 가려지지 않은 상태.
+위협이 camera view 안에 있고, 달 표면이나 ridge에 가려지지 않은 상태. P0 Missile-type Threat visibility의 핵심 상태다.
 
 조건:
 
@@ -266,13 +268,14 @@ Visual Contact 상태에서 crosshair가 threat와 정렬되면 Lock Ready가 �
 표면 또는 물체에 의해 시야가 가려진 상태.
 
 LAO에서의 의미:
-위협과 플레이어 사이의 `line of sight`가 달 표면, ridge, crater rim 등에 의해 막힌 상태.
+위협과 플레이어 사이의 `line of sight`가 달 표면, ridge, crater rim, lunar structure 등에 의해 실제로 막힌 상태.
 
 중요한 점:
 
 ```text
 Surface Occluded는 화면 밖이라는 뜻이 아니다.
 Surface Occluded는 지형 때문에 직접 볼 수 없는 상태다.
+P0 Missile-type Threat의 핵심 상태가 아니라 P1/P2 특수 조건으로 보류한다.
 ```
 
 사용 예시:
@@ -281,7 +284,7 @@ Surface Occluded는 지형 때문에 직접 볼 수 없는 상태다.
 Threat가 화면 방향에 있더라도 line of sight가 Lunar Surface Cross Section에 막히면 Surface Occluded로 판정한다.
 ```
 
-상태: 확정
+상태: 후속 검토 (P1/P2 특수 조건)
 
 ---
 
@@ -291,7 +294,7 @@ Threat가 화면 방향에 있더라도 line of sight가 Lunar Surface Cross Sec
 화면 밖.
 
 LAO에서의 의미:
-위협이 존재하지만 현재 camera view 밖에 있어 보이지 않는 상태.
+위협이 존재하지만 camera pitch 또는 view direction 때문에 현재 camera view 밖에 있어 보이지 않는 상태. P0 Missile-type Threat에서도 필요한 기본 visibility 상태다.
 
 Surface Occluded와 차이:
 
@@ -330,15 +333,47 @@ Front Projection Preview 안에는 threat marker가 보이지만,
 예측된 접촉/탐지.
 
 LAO에서의 의미:
-아직 직접 보이지는 않지만, trajectory 예측 또는 Impact Warning Corridor 기준으로 경고 가능한 상태.
+아직 직접 보이지는 않지만, trajectory 예측 또는 Impact Warning Corridor 기준으로 경고 가능한 상태를 뜻하는 후보 표현이었다.
 
-예시:
+현재 판단:
 
 ```text
-Threat는 아직 Visual Contact가 아니지만 predicted trajectory가 Lunar Defense Zone을 향하면 Predicted Contact로 표시할 수 있다.
+Predicted Contact는 Visual Contact와 혼동될 수 있으므로 P0에서는 사용하지 않는다.
+필요 시 Predicted Impact 또는 Incoming Prediction으로 용어를 재검토한다.
 ```
 
-상태: 후보
+상태: 후속 검토
+
+---
+
+### Predicted Impact
+
+일반적 의미:
+예측된 충돌.
+
+LAO에서의 의미:
+아직 직접 보이지 않더라도 trajectory / warning model상 `Impact` 가능성이 예측되는 상태 후보.
+
+주의:
+
+```text
+Predicted Impact는 P0 확정 상태가 아니다.
+Predicted Contact를 대체할 수 있는 후보 용어로만 둔다.
+```
+
+상태: 후속 검토
+
+---
+
+### Incoming Prediction
+
+일반적 의미:
+접근 중이라는 예측.
+
+LAO에서의 의미:
+위협이 접근 중이라는 예측 경고 후보 용어. `Visual Contact`와 혼동되지 않도록 P1/P2에서 재검토한다.
+
+상태: 후속 검토
 
 ---
 
@@ -967,13 +1002,14 @@ Visual Contact는 “실제로 볼 수 있음”이다.
 | ----- | ----------------- | ----------------------- |
 | 원인    | 카메라가 그 방향을 보지 않음  | 달 표면/ridge가 시야를 막음      |
 | 해결    | 시야를 돌리면 보일 수 있음   | 시야를 돌려도 지형 뒤라 안 보일 수 있음 |
-| 게임 의미 | edge indicator 필요 | 조준 불가 또는 대기 필요          |
+| 게임 의미 | P0에서 edge indicator 필요 | P1/P2 특수 조건으로 보류          |
 
 정리:
 
 ```text
 Off-screen은 화면 밖,
 Surface Occluded는 지형 뒤다.
+P0 Missile-type Threat에서는 Surface Occluded를 핵심 상태로 쓰지 않는다.
 ```
 
 ---
@@ -1077,6 +1113,10 @@ Impact Warning을 더 잘 보이게 해줘.
 Surface Occluded는 threat가 화면 밖에 있는 상태가 아니라, player camera와 threat marker 사이의 line of sight가 Lunar Surface Cross Section 또는 ridge line에 의해 막힌 상태로 정의한다.
 ```
 
+```text
+P0 Missile-type Threat에서는 Surface Occluded를 핵심 상태로 사용하지 않고, P1/P2 특수 조건으로 보류한다.
+```
+
 피해야 할 표현:
 
 ```text
@@ -1096,12 +1136,30 @@ Visual Contact는 threat가 camera view 안에 있고 Surface Occluded가 아닌
 ```
 
 ```text
+P0 visibility는 Off-screen / Visual Contact 중심으로 단순화한다.
+```
+
+```text
 Threat On Screen과 Visual Contact는 같은 의미가 아니므로 상태 label에서 구분한다.
 ```
 
 ---
 
-## 6.4 trajectory / projection 관련
+## 6.4 Predicted Contact 관련
+
+권장 표현:
+
+```text
+Predicted Contact는 Visual Contact와 혼동될 수 있으므로 P0에서는 사용하지 않는다.
+```
+
+```text
+필요하면 Predicted Impact 또는 Incoming Prediction으로 용어를 재검토한다.
+```
+
+---
+
+## 6.5 trajectory / projection 관련
 
 권장 표현:
 
@@ -1220,13 +1278,15 @@ front-approach technical spike
 
 ```text
 Impact Warning은 마지막 방어 선택 구간이다.
-Surface Occluded는 화면 밖이 아니라 line of sight가 달 표면/ridge에 막힌 상태다.
+P0 visibility는 Off-screen / Visual Contact 중심으로 단순화한다.
+Surface Occluded는 화면 밖이 아니라 line of sight가 달 표면/ridge에 막힌 상태이며, P0 핵심 상태가 아니다.
+Predicted Contact는 P0에서 사용하지 않고 필요 시 Predicted Impact / Incoming Prediction으로 재검토한다.
 Visual Contact는 시야 안에 있고 occlusion이 없는 상태다.
 prototype은 플레이 감각 검증 도구다.
 simulator는 질문/구조 검증 도구다.
 ```
 
-이 다섯 가지가 흔들리지 않으면 이후 Codex 요청문과 역할별 문서의 혼선을 크게 줄일 수 있다.
+이 기준이 흔들리지 않으면 이후 Codex 요청문과 역할별 문서의 혼선을 크게 줄일 수 있다.
 
 ---
 

@@ -4,11 +4,24 @@ category: living-aegis-origin
 source_repo: living-aegis-origin
 source_path: DECISION_LOG.md
 copy_type: reading-copy
-last_reviewed: 2026-07-08
+last_reviewed: 2026-07-09
 print_friendly: true
 ---
 
 # 결정 기록
+
+## 2026-07-09 - P0 Threat Visibility and Approach Model
+
+결정: P0 Missile-type Threat에서는 Surface Occluded와 Predicted Contact를 핵심 상태로 사용하지 않는다.
+
+세부:
+
+- P0 visibility는 Off-screen / Visual Contact 중심으로 단순화한다.
+- Surface Occluded는 crater rim, lunar structure, low-angle approach처럼 실제 line of sight가 막히는 P1/P2 특수 조건으로 보류한다.
+- Predicted Contact는 Visual Contact와 혼동될 수 있어 P0에서는 사용하지 않는다.
+- 필요 시 Predicted Impact 또는 Incoming Prediction으로 재검토한다.
+
+이유: 현재 LAO의 P0 목표는 복잡한 occlusion / prediction 상태보다 Missile-type Threat의 정면 접근감과 Impact Warning Corridor 체감을 검증하는 것이다.
 
 ## 2026-07-08 - Threat Type Classification v0.1
 

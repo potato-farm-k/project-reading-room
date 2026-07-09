@@ -21,7 +21,7 @@
     "category": "living-aegis-origin",
     "path": "library/living-aegis-origin/gdd.md",
     "type": "reading-copy",
-    "description": "LAO의 게임 디자인, Impact Warning과 Threat Type Draft(Missile-type, Beam/Charge-type, Mass/Object-type)를 포함한 통합 기준 문서"
+    "description": "LAO의 게임 디자인, P0 visibility(Off-screen / Visual Contact), Impact Warning Corridor, Surface Occluded / Predicted Contact 보류, Three.js spike 재검토와 다음 prototype 기준을 포함한 통합 기준 문서"
   },
   {
     "id": "lao-decision-log",
@@ -29,7 +29,7 @@
     "category": "living-aegis-origin",
     "path": "library/living-aegis-origin/decision-log.md",
     "type": "reading-copy",
-    "description": "LAO의 주요 설계 결정과 Threat Type Classification 판단 이유를 날짜별로 기록한 문서"
+    "description": "LAO의 주요 설계 결정과 Threat Visibility / Approach Model 판단 이유를 날짜별로 기록한 문서"
   },
   {
     "id": "lao-glossary",
@@ -37,7 +37,7 @@
     "category": "living-aegis-origin",
     "path": "library/living-aegis-origin/glossary.md",
     "type": "reading-copy",
-    "description": "LAO 역할 채팅과 Codex 작업에서 공통으로 사용할 프로젝트 용어집"
+    "description": "LAO 역할 채팅과 Codex 작업에서 공통으로 사용할 프로젝트 용어집. Off-screen, Visual Contact, Surface Occluded, Predicted Contact, Predicted Impact / Incoming Prediction 관련 기준을 포함한다."
   },
   {
     "id": "lao-sound-direction",

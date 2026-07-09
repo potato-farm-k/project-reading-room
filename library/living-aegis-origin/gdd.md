@@ -4,7 +4,7 @@ category: living-aegis-origin
 source_repo: living-aegis-origin
 source_path: docs/GDD.md
 copy_type: reading-copy
-last_reviewed: 2026-07-08
+last_reviewed: 2026-07-09
 print_friendly: true
 ---
 
@@ -164,21 +164,17 @@ print_friendly: true
   → 다음 위협
 ```
 
-### Prototype Loop (현재 구현 기준)
+### Prototype Loop (P0 Missile-type 현재 기준)
 
 ```
-Source
-  → Boost
-  → Trajectory
-  → [Visual Contact / Surface Occluded / Off-screen]
-  → Lock Ready
-  → Intercept ✅
-
-  또는
-
-  → Impact Warning ⚠️
-  → Lunar Defense Zone Impact ❌
+source
+  → boost
+  → main trajectory
+  → Impact Warning Corridor
+  → Lunar Defense Zone / Impact
 ```
+
+P0 Missile-type Threat에서는 낙하감보다 정면 접근감을 우선 검증한다.
 
 ### Threat State Model
 
@@ -189,14 +185,46 @@ Source
 |------|------|-----------------|---------|
 | Off-screen | 화면 밖에 있음 | edge indicator를 보고 시야 이동 | 🔬 실험 중 |
 | Detected | 위협 감지됨, 아직 명확히 안 보임 | 방향 탐색 | 🔬 실험 중 |
-| Surface Occluded | 달 표면 뒤에 가려져 조준 불가 | 기다리거나 시야/상태 변화 확인 | 🔬 실험 중 |
+| Surface Occluded | line of sight가 달 표면/구조물에 막힘 | P1/P2 특수 조건에서 재검토 | 🔁 후속 검토 |
 | Visual Contact | 하늘 영역에 보임 | 조준 가능 | 🔬 실험 중 |
+| Not Locked | 보이지만 crosshair 정렬 전 | 조준 보정 | 🔬 실험 중 |
 | Lock Ready | Visual Contact + crosshair 정렬 | 발사 가능 | 🔬 실험 중 |
 | Intercepted | 요격 성공 | 피드백 확인 | 🔬 실험 중 |
 | **Impact Warning** | **Impact 전 마지막 방어 기회** | **Visual Contact / Lock Ready 가능해야 함** | ⚠️ 수정 중 |
 | Impact | Lunar Defense Zone 도달 | 실패/피해/연출 | 🔁 후속 검토 |
 
 > ⚠️ **현재 리스크**: prototype-07에서 Impact Warning phase가 아직 안정화되지 않았음. Surface Occluded에서 Impact Warning을 건너뛰고 바로 Impact로 이어지는 현상 발생 중.
+
+### P0 Missile-type 상태 단순화 기준
+
+P0 Missile-type Threat의 상태 모델은 단순하게 유지한다.
+
+진행 단계:
+
+```text
+source → boost → main trajectory → Impact Warning Corridor → Lunar Defense Zone / Impact
+```
+
+P0 visibility:
+
+- Off-screen
+- Visual Contact
+
+P0 engagement:
+
+- Not Locked
+- Lock Ready
+- Intercept
+- Impact
+
+P1/P2 reserved:
+
+- Surface Occluded
+- Predicted Impact / Incoming Prediction
+- Beam/Charge Pre-Fire Warning
+- Mass/Object Pressure State
+
+Predicted Contact는 Visual Contact와 혼동될 수 있으므로 P0에서는 사용하지 않는다. 필요하면 Predicted Impact 또는 Incoming Prediction으로 용어를 재검토한다.
 
 ### Threat Type Draft v0.1
 
@@ -453,7 +481,7 @@ Mass/Object-type Threat은 느리지만 무겁고 한 번에 제거되지 않는
 | 좌표계 혼선 | screen-space, world-space, surface anchor 정의를 문서와 디버그 UI에 반복 표시 |
 | Occlusion 판정 복잡도 | 시뮬레이터로 horizon/visibility/impact phase를 분리 검증 |
 | 실제 궤도 계산 유혹 | 현재는 visual trajectory 우선, 물리는 후속으로 보류 |
-| Canvas 2D 한계 | 깊이감이 부족하면 후속 WebGL/Three.js 검토 |
+| Canvas 2D 한계 | 먼저 Canvas 2D 정면 prototype으로 접근감을 재현하고, 여전히 낙하감이 강하거나 거리감이 부족하면 WebGL/Three.js spike 재검토 |
 | Codex 요청 복잡도 | 한 요청에 한 목적만 넣고 금지 범위를 명시 |
 
 ---
@@ -586,7 +614,7 @@ Codex Director의 1차 역할은 게임 디자인, 세계관, 아트 방향, 시
 
 | 항목 | 현재 이슈 |
 |------|---------|
-| Threat Visibility | Off-screen / Surface Occluded / Visual Contact 구분 |
+| Threat Visibility | P0에서는 Off-screen / Visual Contact 중심으로 단순화하고 Surface Occluded는 P1/P2 특수 조건으로 보류 |
 | Impact Warning | 마지막 방어 기회로 동작해야 함 ← **현재 불안정** |
 | Lunar Defense Zone | surface anchor 기준 유지 필요 |
 | Threat Origin | Earth Surface / Orbital, High / Low source position |
@@ -655,13 +683,15 @@ Codex Director의 1차 역할은 게임 디자인, 세계관, 아트 방향, 시
 | `anchor` | 기준점 / 부착 지점 | Lunar Defense Zone surface anchor = 달 표면에 붙어 있는 방어 기준점 |
 | `Impact Warning Corridor` | 마지막 방어 접근 구간 | 위협이 Lunar Defense Zone에 수렴하는 마지막 접근 통로. 현재 후보 용어 |
 | `Threat On Screen` | 위협 표시가 화면 안에 있음 | marker 또는 projection이 화면 안에 표시되는 상태. Visual Contact와 구분하는 후보 용어 |
-| `Predicted Contact` | 예측 접촉 | 아직 보이지 않지만 경고 또는 trajectory 예측이 가능한 상태. 현재 후보 용어 |
+| `Predicted Contact` | 예측 접촉 | Visual Contact와 혼동될 수 있어 P0에서는 사용하지 않음 |
+| `Predicted Impact` | 예측 충돌 | trajectory / warning model상 Impact 가능성이 예측되는 후보 용어. P0 확정 상태는 아님 |
+| `Incoming Prediction` | 접근 예측 | 위협 접근 중임을 알리는 예측 경고 후보 용어. P1/P2에서 재검토 |
 | `crosshair` | 화면 중앙 조준점 | 항상 screen-space에 고정되어 위협을 맞추는 기준이 된다 |
 | `source` | 위협 발생지 / 발사 원천 | Earth Surface Source, Orbital Source 등 |
 | `boost` | 초기 추진 | 발사 직후 지구 중심 반대 방향으로 짧게 밀려나는 느낌 |
 | `trajectory` | 이동 궤적 | source에서 Lunar Defense Zone까지 이어지는 위협의 이동 경로 |
 | `horizon` | 달 지평선 / 표면 경계 | 우주와 달 표면을 나누며 occlusion 판단 기준이 된다 |
-| `surface occluded` | 달 표면 뒤에 가려짐 | 위협이 달 표면 뒤에 있어 조준할 수 없는 상태 |
+| `surface occluded` | 달 표면/구조물 뒤에 가려짐 | P0 핵심 상태가 아니라 실제 line of sight가 막히는 P1/P2 특수 조건 |
 | `off-screen` | 현재 화면 밖 | 시선을 돌리면 다시 볼 수 있는 상태 |
 | `Visual Contact` | 시야 내 포착 | 화면 안의 하늘 영역에서 위협을 직접 확인한 상태 |
 | `Lock Ready` | 조준 완료 / 발사 가능 | Visual Contact 상태에서 crosshair 정렬이 된 상태 |
@@ -702,7 +732,7 @@ Codex Director의 1차 역할은 게임 디자인, 세계관, 아트 방향, 시
 | 2 | 문서 목적 | 최종 결과물이 아니라 다음 작업 효율을 위한 참고 문서 |
 | 3 | 현재 결정 요약 | ✅ 확정 / 🔬 실험 중 / ❓ 미정 / 🔁 후속 검토 |
 | 4 | Core Loop | 감지 → 포착 → 조준 → 요격 |
-| 5 | Threat State Model | Off-screen / Surface Occluded / Visual Contact / Lock Ready / Impact Warning |
+| 5 | Threat State Model | Off-screen / Visual Contact / Not Locked / Lock Ready / Impact Warning |
 | 6 | Narrative Direction | 평화 → 이상 징후 → 첫 방어 성공 |
 | 7 | Art Direction | Comic Cel-Shaded + Bio-Mechanical |
 | 8 | Simulation Direction | view / horizon / occlusion / simulator |
