@@ -22,7 +22,7 @@ WEB-003에서는 HTML을 브라우저가 해석하는 웹 문서의 구조 언�
 
 WEB-004에서는 CSS를 HTML 구조 위에 시각적 표현과 배치를 입히는 스타일 언어로 이해합니다.
 
-WEB-005에서는 JavaScript를 브라우저 안에서 웹페이지에 동작과 상호작용을 부여하는 프로그래밍 언어로 이해합니다.
+WEB-005에서는 JavaScript를 브라우저 안에서 DOM Tree를 조작해 웹페이지에 동작과 상호작용을 부여하는 프로그래밍 언어로 이해합니다.
 
 ## 학습 목적
 
@@ -57,7 +57,7 @@ Reading Room 반영
 - [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) — 브라우저의 역할, Runtime 개념과 실행 흐름
 - [WEB-003-What-Is-HTML.md](./WEB-003-What-Is-HTML.md) — HTML의 역할, Markup과 웹 문서 구조
 - [WEB-004-Why-CSS.md](./WEB-004-Why-CSS.md) — CSS가 필요한 이유와 구조/표현의 분리
-- [WEB-005-Why-JavaScript.md](./WEB-005-Why-JavaScript.md) — JavaScript가 필요한 이유와 웹페이지의 동작/상호작용
+- [WEB-005-Why-JavaScript.md](./WEB-005-Why-JavaScript.md) — JavaScript가 필요한 이유와 DOM Tree 기반 동작/상호작용
 - [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md) — 반복 확인할 Reference 목차
 
 ## 활용 프로젝트

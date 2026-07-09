@@ -125,7 +125,7 @@
     "category": "learning",
     "path": "library/learning/web-foundation/WEB-005-Why-JavaScript.md",
     "type": "source",
-    "description": "JavaScript가 왜 필요하며 브라우저 안에서 웹페이지에 동작과 상호작용을 부여하는지 이해하기 위한 Web Foundation 다섯 번째 Learning Guide"
+    "description": "JavaScript가 왜 필요하며 브라우저 안에서 DOM Tree를 조작해 웹페이지에 동작과 상호작용을 부여하는지 이해하기 위한 Web Foundation 다섯 번째 Learning Guide"
   },
   {
     "id": "learning-web-foundation-reference-index",

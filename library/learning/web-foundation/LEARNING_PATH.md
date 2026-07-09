@@ -22,7 +22,7 @@ print_friendly: true
 | WEB-002 | 브라우저 | 브라우저는 문서와 코드를 어떻게 읽고 실행하며 애플리케이션 플랫폼으로 동작하는가? | `active` | [WEB-002-What-Is-a-Browser.md](./WEB-002-What-Is-a-Browser.md) |
 | WEB-003 | HTML | HTML은 Markup으로 웹 문서의 구조와 의미를 어떻게 표현하는가? | `active` | [WEB-003-What-Is-HTML.md](./WEB-003-What-Is-HTML.md) |
 | WEB-004 | CSS | 구조와 표현을 왜 분리하며 화면은 어떻게 배치되는가? | `active` | [WEB-004-Why-CSS.md](./WEB-004-Why-CSS.md) |
-| WEB-005 | JavaScript | 웹 페이지에 상태와 동작을 어떻게 더하는가? | `active` | [WEB-005-Why-JavaScript.md](./WEB-005-Why-JavaScript.md) |
+| WEB-005 | JavaScript | 웹 페이지에 상태와 동작을 더하고 DOM Tree를 어떻게 조작하는가? | `active` | [WEB-005-Why-JavaScript.md](./WEB-005-Why-JavaScript.md) |
 | WEB-006 | HTTP | Client와 Server는 어떤 규칙으로 요청과 응답을 주고받는가? | `planned` | 학습 시 생성 |
 | WEB-007 | REST API | 웹 자원과 작업을 일관된 인터페이스로 어떻게 표현하는가? | `planned` | 학습 시 생성 |
 | WEB-008 | CORS | 브라우저는 왜 출처가 다른 요청을 제한하는가? | `planned` | 학습 시 생성 |
@@ -53,4 +53,4 @@ print_friendly: true
 
 ## 다음 학습
 
-[WEB-005. Why JavaScript](./WEB-005-Why-JavaScript.md)에서 JavaScript가 웹페이지에 상태, 동작, 상호작용을 더하는 방식을 살펴봅니다.
+[WEB-005. Why JavaScript](./WEB-005-Why-JavaScript.md)에서 JavaScript가 웹페이지에 상태, 동작, 상호작용을 더하고 DOM Tree를 조작하는 방식을 살펴봅니다.
