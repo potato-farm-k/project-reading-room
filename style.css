@@ -103,6 +103,27 @@ select {
   line-height: 1.55;
 }
 
+.version-link {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.version-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.version-link:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .toolbar {
   display: grid;
   gap: 14px;
