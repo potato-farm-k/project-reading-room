@@ -35,6 +35,14 @@ print_friendly: true
 | CORS Headers | 다른 출처의 요청을 허용하는 응답 기준 | 계획 |
 | Access-Control-Allow-Origin | 어떤 origin의 응답 접근을 허용할지 알려주는 CORS 응답 Header | 계획 |
 | Preflight | 실제 cross-origin 요청 전에 브라우저가 보내는 사전 확인 요청 | 계획 |
+| Serverless | 서버 운영을 플랫폼에 맡기고 필요한 함수 중심으로 backend 기능을 실행하는 방식 | 계획 |
+| Serverless Function | 요청이 들어올 때 실행되는 작은 backend 함수 | 계획 |
+| Static Site | 미리 준비된 정적 파일을 제공하는 웹사이트 구조 | 계획 |
+| GitHub Pages | repository의 정적 파일을 웹에서 접근 가능한 사이트로 제공하는 기능 | 계획 |
+| GitHub Actions | repository에서 자동 작업을 실행하는 기능 | 계획 |
+| Relative Path | 현재 파일 위치를 기준으로 계산되는 경로 | 계획 |
+| Absolute Path | 사이트 root를 기준으로 계산되는 경로 | 계획 |
+| API Key | 외부 API 사용 권한을 식별하거나 제한하기 위한 키 | 계획 |
 | Markup | HTML, Markdown, XML처럼 문서 의미를 표시하는 방식 | 계획 |
 | Frontmatter | Markdown 문서 상단의 YAML 메타데이터 | 계획 |
 | CSS | HTML 구조에 표현과 배치를 적용하는 스타일 언어 | 계획 |
@@ -61,3 +69,5 @@ print_friendly: true
 - [WEB-007. How HTTP Works](./WEB-007-How-HTTP-Works.md)
 - [WEB-008. Why REST API](./WEB-008-Why-REST-API.md)
 - [WEB-009. Why CORS](./WEB-009-Why-CORS.md)
+- [WEB-010. Why Serverless](./WEB-010-Why-Serverless.md)
+- [WEB-011. GitHub Pages Architecture](./WEB-011-GitHub-Pages-Architecture.md)

@@ -160,6 +160,22 @@
     "description": "CORS가 왜 필요하며 브라우저가 다른 origin의 API 응답 접근을 어떻게 제한하고 허용하는지 이해하기 위한 Web Foundation 아홉 번째 Learning Guide"
   },
   {
+    "id": "learning-web-foundation-web-010-why-serverless",
+    "title": "WEB-010. Why Serverless",
+    "category": "learning",
+    "path": "library/learning/web-foundation/WEB-010-Why-Serverless.md",
+    "type": "source",
+    "description": "정적 웹페이지가 서버 기능을 필요로 할 때 Serverless를 선택할 수 있는 이유를 이해하기 위한 Web Foundation 열 번째 Learning Guide"
+  },
+  {
+    "id": "learning-web-foundation-web-011-github-pages-architecture",
+    "title": "WEB-011. GitHub Pages Architecture",
+    "category": "learning",
+    "path": "library/learning/web-foundation/WEB-011-GitHub-Pages-Architecture.md",
+    "type": "source",
+    "description": "GitHub Pages가 정적 파일을 웹사이트로 제공하는 구조와 Project Reading Room이 그 위에서 동작하는 방식을 이해하기 위한 Web Foundation 열한 번째 Learning Guide"
+  },
+  {
     "id": "learning-web-foundation-reference-index",
     "title": "Web Foundation Reference Index",
     "category": "learning",

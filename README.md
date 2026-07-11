@@ -111,6 +111,8 @@ library/
       WEB-007-How-HTTP-Works.md
       WEB-008-Why-REST-API.md
       WEB-009-Why-CORS.md
+      WEB-010-Why-Serverless.md
+      WEB-011-GitHub-Pages-Architecture.md
       WEB_REFERENCE_INDEX.md
 ```
 
