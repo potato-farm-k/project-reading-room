@@ -28,6 +28,7 @@ print_friendly: true
 | Frontmatter | Markdown 문서 상단의 YAML 메타데이터 | 계획 |
 | CSS | HTML 구조에 표현과 배치를 적용하는 스타일 언어 | 계획 |
 | JavaScript | 브라우저에서 동작, 상태 변화와 상호작용을 만드는 언어 | 계획 |
+| Browser Rendering | DOM, CSSOM, Render Tree, Layout, Paint, Composite의 화면 생성 흐름 | 계획 |
 
 ## 사용 원칙
 
@@ -45,3 +46,4 @@ print_friendly: true
 - [WEB-003. What Is HTML](./WEB-003-What-Is-HTML.md)
 - [WEB-004. Why CSS](./WEB-004-Why-CSS.md)
 - [WEB-005. Why JavaScript](./WEB-005-Why-JavaScript.md)
+- [WEB-006. How Browser Builds a Page](./WEB-006-How-Browser-Builds-a-Page.md)

@@ -107,6 +107,7 @@ library/
       WEB-003-What-Is-HTML.md
       WEB-004-Why-CSS.md
       WEB-005-Why-JavaScript.md
+      WEB-006-How-Browser-Builds-a-Page.md
       WEB_REFERENCE_INDEX.md
 ```
 

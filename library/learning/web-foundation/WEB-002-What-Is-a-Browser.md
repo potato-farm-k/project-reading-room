@@ -177,7 +177,8 @@ Living Aegis Origin 같은 Canvas 2D 기반 게임도 브라우저가 JavaScript
 - [WEB-003](./WEB-003-What-Is-HTML.md)에서는 브라우저가 가장 먼저 해석하는 HTML의 구조와 의미를 학습합니다.
 - WEB-004에서는 CSS가 화면의 모양과 배치를 정하는 방식을 학습합니다.
 - WEB-005에서는 JavaScript가 브라우저 안에서 상호작용을 만드는 방식을 학습합니다.
-- WEB-006에서는 브라우저와 서버가 주고받는 HTTP 요청과 응답을 더 자세히 분리해 봅니다.
+- WEB-006에서는 브라우저가 DOM, CSSOM, Render Tree를 만들고 화면을 구성하는 과정을 더 자세히 봅니다.
+- WEB-007에서는 브라우저와 서버가 주고받는 HTTP 요청과 응답을 더 자세히 분리해 봅니다.
 - Node.js, Canvas, WebGL과 GPU는 이후 프로젝트 경험이 쌓일 때 별도 Reference나 심화 문서로 분리할 수 있습니다.
 
 ## 9. 변경 이력 및 학습 메모

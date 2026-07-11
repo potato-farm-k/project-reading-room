@@ -249,7 +249,8 @@ Browser
 
 - [WEB-004](./WEB-004-Why-CSS.md)에서는 HTML 구조에 모양과 배치를 입히는 CSS를 학습합니다.
 - WEB-005에서는 HTML 요소에 동작과 상태 변화를 더하는 JavaScript를 학습합니다.
-- WEB-006에서는 브라우저가 HTML, CSS, JavaScript를 요청하고 응답받는 HTTP 흐름을 더 자세히 봅니다.
+- WEB-006에서는 브라우저가 HTML을 DOM Tree로 만들고 CSS와 함께 화면을 구성하는 흐름을 더 자세히 봅니다.
+- WEB-007에서는 브라우저가 HTML, CSS, JavaScript를 요청하고 응답받는 HTTP 흐름을 더 자세히 봅니다.
 - Markdown, XML, YAML과 Frontmatter는 이후 문서 관리 또는 Reference 문서에서 더 자세히 분리할 수 있습니다.
 
 ## 9. 변경 이력 및 학습 메모

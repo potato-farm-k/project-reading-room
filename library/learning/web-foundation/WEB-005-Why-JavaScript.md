@@ -123,7 +123,7 @@ button.addEventListener("click", () => {
 
 JavaScript는 필요한 경우 서버나 API에 HTTP 요청을 보낼 수 있습니다. 예를 들어 날씨 데이터, 랭킹 목록, 사용자 설정 같은 데이터를 받아온 뒤 화면을 업데이트할 수 있습니다.
 
-이 문서에서는 “JavaScript가 요청을 보낼 수 있다”는 연결만 이해합니다. HTTP, REST API, CORS의 자세한 규칙은 WEB-006, WEB-007, WEB-008에서 따로 다룹니다.
+이 문서에서는 “JavaScript가 요청을 보낼 수 있다”는 연결만 이해합니다. HTTP, REST API, CORS의 자세한 규칙은 WEB-007, WEB-008, WEB-009에서 따로 다룹니다.
 
 ## 4. 실제 동작 과정
 
@@ -197,9 +197,10 @@ Living Aegis Origin에서 JavaScript는 Canvas를 그리고, 게임 루프를 �
 
 ## 8. 다음 문서와의 연결
 
-- WEB-006에서는 HTML, CSS, JavaScript 파일과 API 데이터가 HTTP 요청과 응답으로 브라우저에 도착하는 규칙을 더 자세히 학습합니다.
-- WEB-007에서는 JavaScript가 호출하는 REST API가 자원과 작업을 어떤 방식으로 표현하는지 살펴봅니다.
-- WEB-008에서는 브라우저가 다른 출처의 API 요청을 왜 제한하고 CORS가 어떤 기준으로 허용을 판단하는지 다룹니다.
+- [WEB-006](./WEB-006-How-Browser-Builds-a-Page.md)에서는 브라우저가 HTML, CSS, JavaScript를 실제 화면으로 구성하는 과정과 DOM이 어떻게 생성되고 변경되는지 살펴봅니다.
+- WEB-007에서는 HTML, CSS, JavaScript 파일과 API 데이터가 HTTP 요청과 응답으로 브라우저에 도착하는 규칙을 더 자세히 학습합니다.
+- WEB-008에서는 JavaScript가 호출하는 REST API가 자원과 작업을 어떤 방식으로 표현하는지 살펴봅니다.
+- WEB-009에서는 브라우저가 다른 출처의 API 요청을 왜 제한하고 CORS가 어떤 기준으로 허용을 판단하는지 다룹니다.
 - DOM Model, DOM Tree, HTML Parser, JavaScript 문법, module, async/await, Canvas API는 이후 프로젝트 경험이 쌓일 때 별도 Guide나 Reference로 나눌 수 있습니다.
 
 ## 9. 변경 이력 및 학습 메모

@@ -154,7 +154,8 @@ Browser 또는 별도 Server가 외부 공공 API에 HTTP 요청을 보내 JSON 
 ## 8. 다음 문서와의 연결
 
 - [WEB-002](./WEB-002-What-Is-a-Browser.md)에서는 Browser가 응답을 해석하고 화면을 만드는 역할을 더 자세히 살펴봅니다.
-- WEB-006에서는 HTTP 요청과 응답 구조를 분리해 학습합니다.
+- WEB-006에서는 브라우저가 받은 HTML, CSS, JavaScript를 실제 화면으로 구성하는 과정을 학습합니다.
+- WEB-007에서는 HTTP 요청과 응답 구조를 분리해 학습합니다.
 - DNS와 DDNS는 이후 DNS 심화 또는 배포/운영 문서에서 더 자세히 다룹니다.
 - [Web Reference Index](./WEB_REFERENCE_INDEX.md)에는 HTTP, MIME Type과 Status Code처럼 반복해서 확인할 항목을 모읍니다.
 
