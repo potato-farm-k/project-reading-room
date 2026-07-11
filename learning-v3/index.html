@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web Foundation Guide를 학습 흐름으로 이어 읽는 Project Reading Room Learning UI"
+    />
+    <title>Project Reading Room Learning</title>
+    <link
+      rel="stylesheet"
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#learning-content">본문으로 건너뛰기</a>
+
+    <header class="site-header screen-only">
+      <a class="learning-brand" href="#/web-foundation/part-1/all" aria-label="Learning UI 홈">
+        <span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>
+          <strong>Project Reading Room</strong>
+          <small>Learning</small>
+        </span>
+      </a>
+
+      <div class="header-actions">
+        <button
+          id="search-toggle"
+          class="header-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="search-panel"
+        >
+          <span class="search-icon" aria-hidden="true"></span>
+          <span>Guide 검색</span>
+        </button>
+        <a class="classic-link" href="../index.html">Reading Room <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+
+    <aside id="search-panel" class="search-panel screen-only" aria-label="Learning Guide 검색" hidden>
+      <div class="search-panel-inner">
+        <label for="search-input">Learning Guide 검색</label>
+        <input id="search-input" type="search" placeholder="WEB-007, HTTP, CORS…" autocomplete="off" />
+        <button id="search-close" type="button" aria-label="검색 닫기">×</button>
+      </div>
+      <div id="search-results" class="search-results" aria-live="polite">
+        <p>Guide 번호, 제목 또는 설명으로 검색할 수 있습니다.</p>
+      </div>
+    </aside>
+
+    <nav class="learning-navigation screen-only" aria-label="학습 흐름 탐색">
+      <div class="part-row">
+        <span class="nav-label">Track</span>
+        <button class="track-chip is-active" type="button" aria-current="true">Web Foundation Learning</button>
+        <span class="part-divider" aria-hidden="true">/</span>
+        <button class="part-chip is-active" type="button" aria-current="true">Part I</button>
+      </div>
+      <div id="category-navigation" class="category-row" aria-label="Category 메뉴">
+        <a class="category-link" data-category-id="all" href="#/web-foundation/part-1/all">전체</a>
+      </div>
+    </nav>
+
+    <main id="learning-content" class="learning-content" aria-live="polite" aria-busy="true">
+      <div class="loading-state">
+        <span aria-hidden="true"></span>
+        <p>학습 흐름을 준비하고 있습니다.</p>
+      </div>
+    </main>
+
+    <noscript>
+      <p class="noscript-message">Learning Guide를 보려면 JavaScript를 활성화해 주세요.</p>
+    </noscript>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="learning-map.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
