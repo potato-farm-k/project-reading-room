@@ -21,7 +21,10 @@ print_friendly: true
 | HTTP Method | resource에 대해 어떤 행동을 할지 나타내는 동사 | 계획 |
 | JSON | 구조화된 데이터를 표현하고 교환하는 형식 | 계획 |
 | REST API | HTTP를 바탕으로 resource를 요청하고 응답하는 API 설계 방식 | 계획 |
+| Resource | API가 다루는 대상 또는 정보 단위 | 계획 |
 | Endpoint | 특정 resource에 접근하기 위한 URL 경로 | 계획 |
+| Path Variable | URL path 안에서 특정 resource를 지정하는 값 | 계획 |
+| Query Parameter | URL 뒤에 붙어 조회 조건이나 옵션을 나타내는 값 | 계획 |
 | Cookie | Server와 Browser가 작은 상태 정보를 주고받는 방식 | 계획 |
 | MIME Type | 전달한 데이터의 형식과 해석 방법을 알리는 값 | 계획 |
 | Status Code | HTTP 요청 처리 결과를 나타내는 코드 | 계획 |

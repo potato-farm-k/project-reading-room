@@ -25,7 +25,9 @@ print_friendly: true
 - API가 무엇인지 설명합니다.
 - REST API를 HTTP 위에서 resource를 다루는 설계 방식으로 이해합니다.
 - 정적 파일 요청과 API 요청의 차이를 구분합니다.
-- Resource, Endpoint, Method, JSON, Stateless의 기본 의미를 설명합니다.
+- Resource, Endpoint, Path Variable, Query Parameter, Method, JSON, Stateless의 기본 의미를 설명합니다.
+- URL에서 Scheme, Host, Path, Query Parameter를 구분해 읽습니다.
+- REST 스타일과 RPC 스타일의 차이를 간단히 비교합니다.
 - JavaScript가 API 응답을 받아 DOM을 업데이트하는 흐름을 이해합니다.
 - GitHub Pages는 API 서버가 아니지만 외부 API를 호출할 수 있다는 점을 구분합니다.
 - CORS, 인증, 토큰, 쿠키, 세션, API 보안은 이후 문서에서 다룰 주제임을 이해합니다.
@@ -54,6 +56,27 @@ HTTP만으로도 브라우저와 서버는 요청과 응답을 주고받을 수 
 REST는 이런 고민에서 출발했습니다.
 
 REST API는 HTTP의 URL, Method, Status Code 등을 사용해 클라이언트와 서버가 resource를 요청하고 응답하는 방식을 더 일관되게 설계하려는 접근입니다.
+
+예를 들어 같은 사용자 데이터를 다루더라도 REST 스타일과 RPC 스타일은 URL을 읽는 감각이 다릅니다.
+
+REST 스타일:
+
+```text
+GET    /users
+GET    /users/3
+POST   /users
+DELETE /users/3
+```
+
+RPC 스타일:
+
+```text
+GET  /getUser?id=3
+POST /createUser
+POST /deleteUser
+```
+
+REST는 URL은 자원(Resource)을, HTTP Method는 동작(Action)을 표현하도록 권장합니다.
 
 ## 3. 핵심 개념
 
@@ -107,6 +130,49 @@ Endpoint는 특정 resource에 접근하기 위한 URL 경로입니다.
 ```
 
 `/api/books`는 책 목록 또는 새 책 생성을 다루고, `/api/books/1`은 id가 `1`인 책 한 권을 다룬다고 설계할 수 있습니다.
+
+### URL을 어떻게 읽어야 할까?
+
+REST API를 읽으려면 URL을 덩어리로 나눠 보는 연습이 필요합니다.
+
+예:
+
+```text
+https://api.example.com/books/10?sort=title&page=2
+```
+
+| 부분 | 이름 | 의미 |
+| --- | --- | --- |
+| `https` | Scheme | 어떤 방식으로 통신할지 나타냅니다. |
+| `api.example.com` | Host | 요청을 받을 서버 이름입니다. |
+| `/books/10` | Path | 서버 안에서 접근하려는 경로입니다. |
+| `10` | Path Variable / Path Parameter | 특정 resource를 지정하는 값입니다. |
+| `?sort=title&page=2` | Query Parameters | 조회 조건이나 옵션입니다. |
+
+중요한 점은 `/books/10` 전체가 Path이며, `10`은 Query Parameter가 아니라 Path 안에 들어 있는 Path Variable이라는 것입니다.
+
+### Path Variable과 Query Parameter
+
+Path Variable은 특정 자원을 지정합니다.
+
+```text
+/books/10
+/users/3
+```
+
+Query Parameter는 조회 조건이나 옵션을 지정합니다.
+
+```text
+/books?page=2
+/books?sort=title
+```
+
+처음에는 이렇게 기억하면 좋습니다.
+
+```text
+Path Variable = 무엇을 가져올 것인가
+Query Parameter = 어떻게 가져올 것인가
+```
 
 ### Method
 
@@ -225,6 +291,14 @@ Accept: application/json
 
 아닙니다. URL이 있다고 해서 모두 REST API는 아닙니다. REST API에서는 URL이 resource를 표현하고, Method가 행동을 표현하도록 설계하는 경향이 있습니다.
 
+### Path Variable과 Query Parameter는 같은 것이다
+
+아닙니다. `/books/10`의 `10`은 특정 책을 가리키는 Path Variable이고, `/books?page=2`의 `page=2`는 목록을 어떻게 가져올지 정하는 Query Parameter입니다.
+
+### REST는 URL에 동사를 절대 쓰면 안 된다는 법이다
+
+아닙니다. REST는 법이 아니라 설계 철학입니다. 다만 `/getUser`, `/deleteUser`처럼 동작을 URL에 넣기보다, `/users/3`이라는 resource와 `GET`, `DELETE` 같은 Method를 조합하면 API를 더 일관되게 읽기 쉽습니다.
+
 ### GET은 데이터를 가져오기만 하므로 서버에 아무 영향도 줄 수 없다
 
 보통 GET은 조회에 사용하고 서버 상태를 바꾸지 않는 것이 기대됩니다. 하지만 실제 서버 구현이 잘못되어 있으면 GET 요청이 영향을 줄 수도 있습니다. 그래서 설계 의도와 실제 구현을 함께 봐야 합니다.
@@ -284,10 +358,12 @@ JavaScript는 응답 데이터를 읽고, 필요한 항목을 DOM에 추가해 �
 
 1. 공공데이터 API 문서 하나를 열고 endpoint, Method, 응답 형식을 찾아봅니다.
 2. `/api/books`, `/api/books/1`, `/api/books/1/reviews`가 각각 어떤 resource를 가리키는지 설명해 봅니다.
-3. 조회, 생성, 전체 수정, 일부 수정, 삭제에 각각 어떤 Method를 쓰면 좋을지 적어봅니다.
-4. 같은 기능을 `/getBook`, `/deleteBook`처럼 설계했을 때와 `GET /books/1`, `DELETE /books/1`처럼 설계했을 때의 차이를 비교해 봅니다.
-5. GitHub Pages에서 실행되는 JavaScript가 외부 API를 호출할 수는 있지만, GitHub Pages 자체가 백엔드 API 서버가 아닌 이유를 설명해 봅니다.
-6. API 응답 JSON을 화면 카드 목록으로 바꾸려면 JavaScript가 어떤 일을 해야 하는지 순서대로 말해 봅니다.
+3. `https://api.example.com/books/10?sort=title&page=2`에서 Scheme, Host, Path, Path Variable, Query Parameter를 나눠 봅니다.
+4. `/books/10`과 `/books?page=2`의 차이를 Path Variable과 Query Parameter 관점에서 설명해 봅니다.
+5. 조회, 생성, 전체 수정, 일부 수정, 삭제에 각각 어떤 Method를 쓰면 좋을지 적어봅니다.
+6. 같은 기능을 `/getBook`, `/deleteBook`처럼 설계했을 때와 `GET /books/1`, `DELETE /books/1`처럼 설계했을 때의 차이를 비교해 봅니다.
+7. GitHub Pages에서 실행되는 JavaScript가 외부 API를 호출할 수는 있지만, GitHub Pages 자체가 백엔드 API 서버가 아닌 이유를 설명해 봅니다.
+8. API 응답 JSON을 화면 카드 목록으로 바꾸려면 JavaScript가 어떤 일을 해야 하는지 순서대로 말해 봅니다.
 
 ## 8. 다음 문서와의 연결
 
@@ -302,3 +378,4 @@ REST API를 이해하면 “어떤 endpoint에 어떤 Method로 요청할지”�
 | 날짜 | 변경 내용 | 후속 질문 |
 | --- | --- | --- |
 | 2026-07-11 | WEB-008 초기 Learning Guide 작성 | 브라우저에서 외부 API를 호출할 때 왜 같은 요청이 서버에서는 되는데 브라우저에서는 CORS로 막힐 수 있는가? |
+| 2026-07-11 | URL 구성 요소, Path Variable / Query Parameter 구분, REST와 RPC 스타일 비교를 반영한 개정판으로 교체 | API 문서에서 path parameter와 query parameter는 보통 어떻게 표기되는가? |
