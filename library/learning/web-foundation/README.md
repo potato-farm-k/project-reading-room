@@ -26,7 +26,7 @@ WEB-005에서는 JavaScript를 브라우저 안에서 DOM Tree를 조작해 웹�
 
 WEB-006에서는 브라우저가 HTML, CSS, JavaScript를 해석해 DOM, CSSOM, Render Tree를 만들고 실제 화면을 구성하는 흐름을 이해합니다.
 
-WEB-007에서는 브라우저와 서버가 HTTP Request와 Response를 통해 통신하는 방식을 이해합니다.
+WEB-007에서는 브라우저와 서버가 HTTP Request와 Response를 통해 통신하고, Header와 Body, Content-Type으로 데이터를 해석하는 방식을 이해합니다.
 
 ## 학습 목적
 
@@ -63,7 +63,7 @@ Reading Room 반영
 - [WEB-004-Why-CSS.md](./WEB-004-Why-CSS.md) — CSS가 필요한 이유와 구조/표현의 분리
 - [WEB-005-Why-JavaScript.md](./WEB-005-Why-JavaScript.md) — JavaScript가 필요한 이유와 DOM Tree 기반 동작/상호작용
 - [WEB-006-How-Browser-Builds-a-Page.md](./WEB-006-How-Browser-Builds-a-Page.md) — 브라우저가 DOM, CSSOM, Render Tree를 만들고 화면을 구성하는 흐름
-- [WEB-007-How-HTTP-Works.md](./WEB-007-How-HTTP-Works.md) — HTTP Request와 Response로 이해하는 브라우저와 서버의 통신 방식
+- [WEB-007-How-HTTP-Works.md](./WEB-007-How-HTTP-Works.md) — Request/Response, Header/Body, Content-Type으로 이해하는 HTTP 통신 방식
 - [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md) — 반복 확인할 Reference 목차
 
 ## 활용 프로젝트

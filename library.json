@@ -141,7 +141,7 @@
     "category": "learning",
     "path": "library/learning/web-foundation/WEB-007-How-HTTP-Works.md",
     "type": "source",
-    "description": "브라우저와 서버가 HTTP Request와 Response를 통해 통신하는 방식을 이해하기 위한 Web Foundation 일곱 번째 Learning Guide"
+    "description": "브라우저와 서버가 HTTP Request와 Response를 주고받고 Header, Body, Content-Type으로 데이터를 해석하는 방식을 이해하기 위한 Web Foundation 일곱 번째 Learning Guide"
   },
   {
     "id": "learning-web-foundation-reference-index",
