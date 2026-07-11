@@ -29,7 +29,12 @@ print_friendly: true
 | MIME Type | 전달한 데이터의 형식과 해석 방법을 알리는 값 | 계획 |
 | Status Code | HTTP 요청 처리 결과를 나타내는 코드 | 계획 |
 | Browser Storage | localStorage, sessionStorage와 IndexedDB의 역할 차이 | 계획 |
+| CORS | 다른 origin의 응답 접근을 허용할지 판단하는 브라우저 보안 규칙 | 계획 |
+| Origin | protocol, domain, port를 조합한 출처 | 계획 |
+| Same-Origin Policy | 같은 origin끼리만 자유롭게 응답을 읽도록 제한하는 브라우저 보안 정책 | 계획 |
 | CORS Headers | 다른 출처의 요청을 허용하는 응답 기준 | 계획 |
+| Access-Control-Allow-Origin | 어떤 origin의 응답 접근을 허용할지 알려주는 CORS 응답 Header | 계획 |
+| Preflight | 실제 cross-origin 요청 전에 브라우저가 보내는 사전 확인 요청 | 계획 |
 | Markup | HTML, Markdown, XML처럼 문서 의미를 표시하는 방식 | 계획 |
 | Frontmatter | Markdown 문서 상단의 YAML 메타데이터 | 계획 |
 | CSS | HTML 구조에 표현과 배치를 적용하는 스타일 언어 | 계획 |
@@ -55,3 +60,4 @@ print_friendly: true
 - [WEB-006. How Browser Builds a Page](./WEB-006-How-Browser-Builds-a-Page.md)
 - [WEB-007. How HTTP Works](./WEB-007-How-HTTP-Works.md)
 - [WEB-008. Why REST API](./WEB-008-Why-REST-API.md)
+- [WEB-009. Why CORS](./WEB-009-Why-CORS.md)

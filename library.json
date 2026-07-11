@@ -152,6 +152,14 @@
     "description": "REST API가 왜 필요하며 HTTP Method, endpoint, Path Variable과 Query Parameter로 resource를 요청하고 응답하는 방식을 이해하기 위한 Web Foundation 여덟 번째 Learning Guide"
   },
   {
+    "id": "learning-web-foundation-web-009-why-cors",
+    "title": "WEB-009. Why CORS",
+    "category": "learning",
+    "path": "library/learning/web-foundation/WEB-009-Why-CORS.md",
+    "type": "source",
+    "description": "CORS가 왜 필요하며 브라우저가 다른 origin의 API 응답 접근을 어떻게 제한하고 허용하는지 이해하기 위한 Web Foundation 아홉 번째 Learning Guide"
+  },
+  {
     "id": "learning-web-foundation-reference-index",
     "title": "Web Foundation Reference Index",
     "category": "learning",

@@ -110,6 +110,7 @@ library/
       WEB-006-How-Browser-Builds-a-Page.md
       WEB-007-How-HTTP-Works.md
       WEB-008-Why-REST-API.md
+      WEB-009-Why-CORS.md
       WEB_REFERENCE_INDEX.md
 ```
 
