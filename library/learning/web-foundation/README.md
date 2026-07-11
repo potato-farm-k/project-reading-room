@@ -28,6 +28,8 @@ WEB-006에서는 브라우저가 HTML, CSS, JavaScript를 해석해 DOM, CSSOM, 
 
 WEB-007에서는 브라우저와 서버가 HTTP Request와 Response를 통해 통신하고, Header와 Body, Content-Type으로 데이터를 해석하는 방식을 이해합니다.
 
+WEB-008에서는 REST API를 HTTP를 바탕으로 클라이언트와 서버가 resource를 요청하고 응답하는 설계 방식으로 이해합니다.
+
 ## 학습 목적
 
 - 브라우저와 서버 사이에서 일어나는 일을 설명할 수 있게 됩니다.
@@ -64,6 +66,7 @@ Reading Room 반영
 - [WEB-005-Why-JavaScript.md](./WEB-005-Why-JavaScript.md) — JavaScript가 필요한 이유와 DOM Tree 기반 동작/상호작용
 - [WEB-006-How-Browser-Builds-a-Page.md](./WEB-006-How-Browser-Builds-a-Page.md) — 브라우저가 DOM, CSSOM, Render Tree를 만들고 화면을 구성하는 흐름
 - [WEB-007-How-HTTP-Works.md](./WEB-007-How-HTTP-Works.md) — Request/Response, Header/Body, Content-Type으로 이해하는 HTTP 통신 방식
+- [WEB-008-Why-REST-API.md](./WEB-008-Why-REST-API.md) — HTTP Method와 endpoint로 resource를 다루는 REST API 설계 방식
 - [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md) — 반복 확인할 Reference 목차
 
 ## 활용 프로젝트

@@ -25,7 +25,7 @@ print_friendly: true
 | WEB-005 | JavaScript | 웹 페이지에 상태와 동작을 더하고 DOM Tree를 어떻게 조작하는가? | `active` | [WEB-005-Why-JavaScript.md](./WEB-005-Why-JavaScript.md) |
 | WEB-006 | 브라우저 화면 구성 | 브라우저는 HTML, CSS, JavaScript를 어떻게 해석해 DOM, CSSOM, Render Tree와 화면을 만드는가? | `active` | [WEB-006-How-Browser-Builds-a-Page.md](./WEB-006-How-Browser-Builds-a-Page.md) |
 | WEB-007 | HTTP | Client와 Server는 어떤 규칙으로 요청과 응답을 주고받는가? | `active` | [WEB-007-How-HTTP-Works.md](./WEB-007-How-HTTP-Works.md) |
-| WEB-008 | REST API | 웹 자원과 작업을 일관된 인터페이스로 어떻게 표현하는가? | `planned` | 학습 시 생성 |
+| WEB-008 | REST API | 웹 자원과 작업을 일관된 인터페이스로 어떻게 표현하는가? | `active` | [WEB-008-Why-REST-API.md](./WEB-008-Why-REST-API.md) |
 | WEB-009 | CORS | 브라우저는 왜 출처가 다른 요청을 제한하는가? | `planned` | 학습 시 생성 |
 | WEB-010 | Serverless | 서버를 직접 운영하지 않고 코드를 실행한다는 것은 무엇인가? | `planned` | 학습 시 생성 |
 | WEB-011 | GitHub Pages Architecture | 정적 파일은 GitHub Pages에서 어떻게 빌드되고 배포되는가? | `planned` | 학습 시 생성 |
@@ -39,8 +39,8 @@ print_friendly: true
 
 ## 진행 원칙
 
-- 현재 파일이 있는 Guide는 `WEB-001`, `WEB-002`, `WEB-003`, `WEB-004`, `WEB-005`, `WEB-006`, `WEB-007`입니다.
-- `WEB-008` 이후 문서는 해당 주제를 실제로 학습할 때 만듭니다.
+- 현재 파일이 있는 Guide는 `WEB-001`, `WEB-002`, `WEB-003`, `WEB-004`, `WEB-005`, `WEB-006`, `WEB-007`, `WEB-008`입니다.
+- `WEB-009` 이후 문서는 해당 주제를 실제로 학습할 때 만듭니다.
 - 모든 문서를 한 번에 만들지 않습니다.
 - 학습과 프로젝트 경험이 쌓일 때마다 필요한 문서를 추가하거나 수정합니다.
 - 프로젝트에서 먼저 만난 주제가 있다면 순서를 조정할 수 있습니다.
@@ -54,4 +54,4 @@ print_friendly: true
 
 ## 다음 학습
 
-[WEB-007. How HTTP Works](./WEB-007-How-HTTP-Works.md)에서 브라우저와 서버가 HTTP Request와 Response를 통해 통신하는 방식을 살펴봅니다.
+[WEB-008. Why REST API](./WEB-008-Why-REST-API.md)에서 HTTP를 바탕으로 클라이언트와 서버가 resource를 요청하고 응답하는 방식을 살펴봅니다.

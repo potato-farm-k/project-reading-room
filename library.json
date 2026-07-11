@@ -144,6 +144,14 @@
     "description": "브라우저와 서버가 HTTP Request와 Response를 주고받고 Header, Body, Content-Type으로 데이터를 해석하는 방식을 이해하기 위한 Web Foundation 일곱 번째 Learning Guide"
   },
   {
+    "id": "learning-web-foundation-web-008-why-rest-api",
+    "title": "WEB-008. Why REST API",
+    "category": "learning",
+    "path": "library/learning/web-foundation/WEB-008-Why-REST-API.md",
+    "type": "source",
+    "description": "REST API가 왜 필요하며 HTTP를 바탕으로 클라이언트와 서버가 resource를 요청하고 응답하는 방식을 이해하기 위한 Web Foundation 여덟 번째 Learning Guide"
+  },
+  {
     "id": "learning-web-foundation-reference-index",
     "title": "Web Foundation Reference Index",
     "category": "learning",

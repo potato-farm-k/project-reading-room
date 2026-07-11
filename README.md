@@ -109,6 +109,7 @@ library/
       WEB-005-Why-JavaScript.md
       WEB-006-How-Browser-Builds-a-Page.md
       WEB-007-How-HTTP-Works.md
+      WEB-008-Why-REST-API.md
       WEB_REFERENCE_INDEX.md
 ```
 

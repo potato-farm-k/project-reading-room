@@ -18,7 +18,10 @@ print_friendly: true
 | --- | --- | --- |
 | HTTP | 요청과 응답, method, status와 version | 계획 |
 | Header | 요청과 응답에 덧붙는 메타데이터 | 계획 |
+| HTTP Method | resource에 대해 어떤 행동을 할지 나타내는 동사 | 계획 |
 | JSON | 구조화된 데이터를 표현하고 교환하는 형식 | 계획 |
+| REST API | HTTP를 바탕으로 resource를 요청하고 응답하는 API 설계 방식 | 계획 |
+| Endpoint | 특정 resource에 접근하기 위한 URL 경로 | 계획 |
 | Cookie | Server와 Browser가 작은 상태 정보를 주고받는 방식 | 계획 |
 | MIME Type | 전달한 데이터의 형식과 해석 방법을 알리는 값 | 계획 |
 | Status Code | HTTP 요청 처리 결과를 나타내는 코드 | 계획 |
@@ -48,3 +51,4 @@ print_friendly: true
 - [WEB-005. Why JavaScript](./WEB-005-Why-JavaScript.md)
 - [WEB-006. How Browser Builds a Page](./WEB-006-How-Browser-Builds-a-Page.md)
 - [WEB-007. How HTTP Works](./WEB-007-How-HTTP-Works.md)
+- [WEB-008. Why REST API](./WEB-008-Why-REST-API.md)
