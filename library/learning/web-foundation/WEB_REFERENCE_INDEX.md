@@ -47,3 +47,4 @@ print_friendly: true
 - [WEB-004. Why CSS](./WEB-004-Why-CSS.md)
 - [WEB-005. Why JavaScript](./WEB-005-Why-JavaScript.md)
 - [WEB-006. How Browser Builds a Page](./WEB-006-How-Browser-Builds-a-Page.md)
+- [WEB-007. How HTTP Works](./WEB-007-How-HTTP-Works.md)

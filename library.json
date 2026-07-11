@@ -136,6 +136,14 @@
     "description": "브라우저가 HTML, CSS, JavaScript를 해석해 DOM, CSSOM, Render Tree를 만들고 화면을 구성하는 흐름을 이해하기 위한 Web Foundation 여섯 번째 Learning Guide"
   },
   {
+    "id": "learning-web-foundation-web-007-how-http-works",
+    "title": "WEB-007. How HTTP Works",
+    "category": "learning",
+    "path": "library/learning/web-foundation/WEB-007-How-HTTP-Works.md",
+    "type": "source",
+    "description": "브라우저와 서버가 HTTP Request와 Response를 통해 통신하는 방식을 이해하기 위한 Web Foundation 일곱 번째 Learning Guide"
+  },
+  {
     "id": "learning-web-foundation-reference-index",
     "title": "Web Foundation Reference Index",
     "category": "learning",
