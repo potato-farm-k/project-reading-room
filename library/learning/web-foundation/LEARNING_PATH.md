@@ -28,7 +28,7 @@ print_friendly: true
 | WEB-008 | REST API | 웹 자원과 작업을 일관된 인터페이스로 어떻게 표현하는가? | `active` | [WEB-008-Why-REST-API.md](./WEB-008-Why-REST-API.md) |
 | WEB-009 | CORS | 브라우저는 왜 출처가 다른 요청을 제한하는가? | `active` | [WEB-009-Why-CORS.md](./WEB-009-Why-CORS.md) |
 | WEB-010 | Serverless | 서버를 직접 운영하지 않고 코드를 실행한다는 것은 무엇인가? | `active` | [WEB-010-Why-Serverless.md](./WEB-010-Why-Serverless.md) |
-| WEB-011 | GitHub Pages Architecture | 정적 파일은 GitHub Pages에서 어떻게 빌드되고 배포되는가? | `active` | [WEB-011-GitHub-Pages-Architecture.md](./WEB-011-GitHub-Pages-Architecture.md) |
+| WEB-011 | GitHub Pages Architecture | GitHub Pages, 브라우저, Serverless, DB를 어떻게 역할별로 조합해 서비스를 설계하는가? | `active` | [WEB-011-GitHub-Pages-Architecture.md](./WEB-011-GitHub-Pages-Architecture.md) |
 
 상태값은 이 문서에서만 사람이 읽는 진행 표시로 사용합니다.
 
@@ -54,4 +54,4 @@ print_friendly: true
 
 ## 다음 학습
 
-[WEB-011. GitHub Pages Architecture](./WEB-011-GitHub-Pages-Architecture.md)에서 정적 파일이 GitHub Pages를 통해 웹사이트가 되고 Project Reading Room이 그 위에서 동작하는 방식을 살펴봅니다.
+[WEB-011. GitHub Pages Architecture](./WEB-011-GitHub-Pages-Architecture.md)에서 GitHub Pages, 브라우저, Serverless, 외부 API와 DB를 조합해 작은 웹 서비스를 설계하는 기준을 살펴봅니다.

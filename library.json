@@ -173,7 +173,7 @@
     "category": "learning",
     "path": "library/learning/web-foundation/WEB-011-GitHub-Pages-Architecture.md",
     "type": "source",
-    "description": "GitHub Pages가 정적 파일을 웹사이트로 제공하는 구조와 Project Reading Room이 그 위에서 동작하는 방식을 이해하기 위한 Web Foundation 열한 번째 Learning Guide"
+    "description": "GitHub Pages, 브라우저, Serverless, 외부 API와 DB의 역할을 나누고 작은 웹 서비스를 단계적으로 확장하는 구조를 이해하기 위한 Web Foundation 열한 번째 Learning Guide"
   },
   {
     "id": "learning-web-foundation-reference-index",

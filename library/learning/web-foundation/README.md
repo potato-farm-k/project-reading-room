@@ -34,7 +34,7 @@ WEB-009에서는 브라우저가 다른 origin의 API 응답을 JavaScript에 �
 
 WEB-010에서는 정적 웹페이지가 서버 기능을 필요로 할 때 Serverless를 선택할 수 있는 이유를 이해합니다.
 
-WEB-011에서는 GitHub Pages가 정적 파일을 웹사이트로 제공하는 구조와 Project Reading Room이 그 위에서 동작하는 방식을 이해합니다.
+WEB-011에서는 GitHub Pages, 브라우저, Serverless, 외부 API와 DB의 역할을 나누고 작은 웹 서비스를 단계적으로 확장하는 구조를 이해합니다.
 
 ## 학습 목적
 
@@ -75,7 +75,7 @@ Reading Room 반영
 - [WEB-008-Why-REST-API.md](./WEB-008-Why-REST-API.md) — HTTP Method, endpoint, Path Variable과 Query Parameter로 이해하는 REST API 설계 방식
 - [WEB-009-Why-CORS.md](./WEB-009-Why-CORS.md) — 다른 origin의 API 응답 접근을 브라우저가 판단하는 CORS 규칙
 - [WEB-010-Why-Serverless.md](./WEB-010-Why-Serverless.md) — 정적 웹페이지가 서버 기능을 필요로 할 때 Serverless를 선택할 수 있는 이유
-- [WEB-011-GitHub-Pages-Architecture.md](./WEB-011-GitHub-Pages-Architecture.md) — GitHub Pages가 정적 파일을 웹사이트로 제공하는 구조
+- [WEB-011-GitHub-Pages-Architecture.md](./WEB-011-GitHub-Pages-Architecture.md) — GitHub Pages, 브라우저, Serverless, 외부 API와 DB 역할 배치로 이해하는 서비스 아키텍처
 - [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md) — 반복 확인할 Reference 목차
 
 ## 활용 프로젝트
