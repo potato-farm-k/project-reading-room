@@ -17,6 +17,30 @@ const state = {
 const track = window.learningMap?.[0];
 const part = track?.parts?.[0];
 
+const indexDocuments = [
+  {
+    route: "home",
+    documentId: "learning-web-foundation-readme",
+    label: "Home",
+    title: "Web Foundation Learning Track",
+    eyebrow: "Learning Track",
+  },
+  {
+    route: "learning-path",
+    documentId: "learning-web-foundation-learning-path",
+    label: "Learning Path",
+    title: "Web Foundation Learning Path",
+    eyebrow: "Learning Path",
+  },
+  {
+    route: "reference",
+    documentId: "learning-web-foundation-reference-index",
+    label: "Reference",
+    title: "Web Reference Index",
+    eyebrow: "Reference",
+  },
+];
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -43,6 +67,14 @@ function getLibraryDocument(documentId) {
   return state.learningDocuments.find((document) => document.id === documentId);
 }
 
+function getIndexDocument(routeKey) {
+  return indexDocuments.find((document) => document.route === routeKey);
+}
+
+function getIndexDocumentByDocumentId(documentId) {
+  return indexDocuments.find((document) => document.documentId === documentId);
+}
+
 function getCategory(categoryId) {
   return part?.categories.find((category) => category.id === categoryId);
 }
@@ -59,8 +91,16 @@ function guideRoute(slug) {
   return `#/web-foundation/guide/${slug}`;
 }
 
+function indexDocumentRoute(routeKey) {
+  return `#/web-foundation/${routeKey}`;
+}
+
 function parseRoute() {
   const parts = window.location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
+
+  if (parts[0] === "web-foundation" && getIndexDocument(parts[1])) {
+    return { type: "index", routeKey: parts[1] };
+  }
 
   if (parts[0] === "web-foundation" && parts[1] === "guide" && parts[2]) {
     return { type: "guide", slug: parts[2] };
@@ -89,6 +129,21 @@ function renderCategoryNavigation() {
     .join("");
 
   elements.categoryNavigation.insertAdjacentHTML("beforeend", links);
+}
+
+function setActiveTopNavigation(route) {
+  document.querySelectorAll("[data-index-route]").forEach((link) => {
+    const isActive = route.type === "index" && link.dataset.indexRoute === route.routeKey;
+    link.classList.toggle("is-active", isActive);
+    if (isActive) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+
+  const partLink = document.querySelector("[data-part-route]");
+  const isPartActive = route.type === "category" || route.type === "guide";
+  partLink?.classList.toggle("is-active", isPartActive);
+  if (isPartActive) partLink?.setAttribute("aria-current", "page");
+  else partLink?.removeAttribute("aria-current");
 }
 
 function setActiveCategory(categoryId) {
@@ -175,16 +230,14 @@ function renderPartOverview() {
   window.document.title = "Project Reading Room Learning";
 }
 
-async function fetchGuideDocument(entry, signal) {
-  const libraryDocument = getLibraryDocument(entry.documentId);
+async function fetchMarkdownDocument(libraryDocument, signal) {
   if (!libraryDocument) {
-    throw new Error(`Learning document not found: ${entry.documentId}`);
+    throw new Error("Learning document not found");
   }
 
   const markdownResponse = await fetch(`../${libraryDocument.path}`, { signal });
   if (markdownResponse.ok) {
     return {
-      entry,
       libraryDocument,
       format: "markdown",
       content: stripFrontmatter(await markdownResponse.text()),
@@ -202,10 +255,17 @@ async function fetchGuideDocument(entry, signal) {
   if (!htmlResponse.ok) throw new Error(`HTML fallback ${htmlResponse.status}`);
 
   return {
-    entry,
     libraryDocument,
     format: "jekyll-html",
     content: await htmlResponse.text(),
+  };
+}
+
+async function fetchGuideDocument(entry, signal) {
+  const libraryDocument = getLibraryDocument(entry.documentId);
+  return {
+    ...(await fetchMarkdownDocument(libraryDocument, signal)),
+    entry,
   };
 }
 
@@ -298,6 +358,13 @@ function enhanceGuideContent() {
         const matchingGuide = matchingDocument
           ? allGuideEntries().find((entry) => entry.documentId === matchingDocument.id)
           : null;
+        const matchingIndexDocument = matchingDocument
+          ? getIndexDocumentByDocumentId(matchingDocument.id)
+          : null;
+        if (matchingIndexDocument) {
+          element.setAttribute("href", indexDocumentRoute(matchingIndexDocument.route));
+          return;
+        }
         if (matchingGuide) {
           element.setAttribute("href", guideRoute(matchingGuide.slug));
           return;
@@ -306,6 +373,55 @@ function enhanceGuideContent() {
       element.setAttribute(attribute, resolvedUrl.href);
     });
   });
+}
+
+async function renderIndexDocument(indexDocument) {
+  state.activeRequest?.abort();
+  const controller = new AbortController();
+  state.activeRequest = controller;
+  setActiveCategory(null);
+  elements.learningContent.setAttribute("aria-busy", "true");
+  elements.learningContent.innerHTML = `
+    <section class="index-context screen-only">
+      <a href="${categoryRoute("all")}">Part I 전체 보기</a>
+      <span>${escapeHtml(track.title)}</span>
+    </section>
+    <div class="loading-state"><span aria-hidden="true"></span><p>${escapeHtml(indexDocument.label)} 문서를 불러오는 중입니다.</p></div>
+  `;
+
+  try {
+    const libraryDocument = getLibraryDocument(indexDocument.documentId);
+    const loadedDocument = await fetchMarkdownDocument(libraryDocument, controller.signal);
+    if (controller.signal.aborted) return;
+
+    elements.learningContent.innerHTML = `
+      <article class="index-document">
+        <header class="index-document-header">
+          <p class="print-only">Web Foundation Learning · ${escapeHtml(indexDocument.label)}</p>
+          <p class="eyebrow">${escapeHtml(indexDocument.eyebrow)}</p>
+          <h1>${escapeHtml(libraryDocument.title || indexDocument.title)}</h1>
+          <p>${escapeHtml(libraryDocument.description)}</p>
+          <dl class="guide-meta index-meta">
+            <div><dt>Role</dt><dd>${escapeHtml(indexDocument.label)}</dd></div>
+            <div><dt>Source</dt><dd><code>${escapeHtml(libraryDocument.path)}</code></dd></div>
+          </dl>
+        </header>
+        <div class="guide-body markdown-body" data-document-path="${escapeHtml(libraryDocument.path)}">
+          ${guideBodyHtml(loadedDocument)}
+        </div>
+      </article>
+    `;
+    enhanceGuideContent();
+    window.document.title = `${libraryDocument.title || indexDocument.title} — Project Reading Room Learning`;
+  } catch (error) {
+    if (error.name === "AbortError") return;
+    renderError("문서를 불러오지 못했습니다.", "문서 경로와 로컬 서버 상태를 확인해 주세요.");
+  } finally {
+    if (state.activeRequest === controller) {
+      state.activeRequest = null;
+      elements.learningContent.setAttribute("aria-busy", "false");
+    }
+  }
 }
 
 async function renderCategory(category) {
@@ -410,7 +526,15 @@ function renderRoute() {
   }
 
   const route = parseRoute();
+  setActiveTopNavigation(route);
   window.scrollTo({ top: 0, behavior: "auto" });
+
+  if (route.type === "index") {
+    const indexDocument = getIndexDocument(route.routeKey);
+    if (indexDocument) renderIndexDocument(indexDocument);
+    else renderError("문서를 찾을 수 없습니다.", "상단 메뉴에서 Learning 문서를 선택해 주세요.");
+    return;
+  }
 
   if (route.type === "guide") {
     const guide = getGuide(route.slug);

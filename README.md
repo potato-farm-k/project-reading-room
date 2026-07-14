@@ -118,6 +118,12 @@ library/
 
 Learning Track 문서는 `library/learning/[track-name]/` 아래에 둘 수 있습니다. **Web Foundation**은 웹의 동작 원리를 처음부터 체계적으로 이해하기 위한 첫 번째 Learning Track입니다.
 
+Learning UI v3는 `learning-v3/`에서 운영하는 Learning 전용 화면입니다. Web Foundation에서는 상단 안내 navigation으로 `Home`(`README.md`), `Learning Path`(`LEARNING_PATH.md`), `Part I`(`WEB-001`~`WEB-011` Category 연속 읽기), `Reference`(`WEB_REFERENCE_INDEX.md`)를 구분해 접근합니다. 초기 진입 화면은 기존 Part I 전체 흐름을 유지하며, 안내 문서는 별도 Part나 Category로 등록하지 않습니다.
+
+### Learning UI v3 확인 기록
+
+2026-07-14 기준으로 Home, Learning Path, Part I, Reference 상단 navigation을 추가했습니다. 확인 범위는 `node --check learning-v3/app.js`, `node --check learning-v3/learning-map.js`, `git diff --check`, `library.json` 스키마와 인덱스 문서 중복 등록 여부, 로컬 정적 서버에서 `learning-v3/`, `library.json`, 세 인덱스 문서와 대표 Guide의 HTTP 200 응답입니다. `learning-v3/learning-map.js`와 `library.json` 스키마는 변경하지 않았습니다.
+
 각 Markdown 파일에는 `title`, `category`, `source_repo`, `source_path`, `copy_type`, `last_reviewed`, `print_friendly`를 기록하는 간단한 YAML frontmatter가 있습니다. frontmatter는 문서 자체를 관리하기 위한 메모이며 화면 목록의 기준이 아닙니다. 앱은 이를 해석하지 않고 본문 렌더링 전에 숨깁니다.
 
 ## 문서 추가하기

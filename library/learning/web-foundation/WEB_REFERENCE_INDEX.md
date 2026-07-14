@@ -1826,7 +1826,7 @@ Reference
 → WEB_REFERENCE_INDEX.md
 ```
 
-현재 인덱스 문서 3종의 UI v3 직접 노출은 별도 반영 작업이 필요합니다.
+현재 인덱스 문서 3종은 UI v3 상단 안내 navigation에서 직접 접근할 수 있습니다.
 
 ---
 
@@ -1901,3 +1901,4 @@ Deployment
 - 프로젝트별 빠른 참조 추가
 - UI v3의 `Reference` 진입점과 인덱스 문서 노출 상태 추가
 - Part II 확장 원칙 추가
+- Learning UI v3 상단의 Home, Learning Path, Reference 직접 접근 상태 반영

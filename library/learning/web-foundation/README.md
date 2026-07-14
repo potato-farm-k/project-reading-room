@@ -408,9 +408,7 @@ WEB_REFERENCE_INDEX.md
 Web Reference Index
 ```
 
-현재 UI v3는 Part와 Category의 Guide 연속 읽기를 중심으로 적용되어 있습니다.
-
-세 인덱스 문서를 UI v3에서 직접 접근할 수 있도록 하는 메뉴 또는 시작 영역은 별도 반영이 필요합니다.
+현재 UI v3는 Part와 Category의 Guide 연속 읽기를 중심으로 적용되어 있으며, 상단 안내 navigation에서 세 인덱스 문서에 직접 접근할 수 있습니다.
 
 권장 연결 구조:
 
@@ -721,3 +719,4 @@ Part I의 HTTP, REST, CORS, Serverless, 서비스 아키텍처를 실제로 연�
 - Part I 완료 기준 추가
 - Part II와 Part III의 방향 정리
 - Project Reading Room, Potato's Day, Living Aegis Origin, 공공데이터 서비스 연결 추가
+- Learning UI v3 상단에서 Home, Learning Path, Reference 인덱스 문서 접근 가능 상태 반영

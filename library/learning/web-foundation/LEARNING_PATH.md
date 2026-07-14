@@ -591,6 +591,8 @@ UI v3의 주요 구조:
 ```text
 좌측 검색·선택 프레임 없음
 
+상단 Home / Learning Path / Reference 안내 navigation
+
 상단 Part 메뉴
 +
 상단 Category 메뉴
@@ -918,6 +920,7 @@ Learning Track의 목적, 현재 상태, 주요 문서와 운영 원칙을 간�
 - 각 Category의 목적, 문서, 완료 기준 추가
 - WEB-007~WEB-011 개정 내용을 학습 목표에 반영
 - Learning 전용 UI v3의 상단 Part·Category 메뉴와 연속 읽기 방식 반영
+- Learning UI v3의 Home, Learning Path, Reference 상단 안내 navigation 반영
 - 처음 학습, Category 복습, 종합 질문, 용어 검색 방법 구분
 - 문서별 순차 개정 프로세스 추가
 - Part I 전체 완료 기준 추가

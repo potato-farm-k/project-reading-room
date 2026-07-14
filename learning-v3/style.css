@@ -348,6 +348,8 @@
 
   .track-chip,
   .part-chip {
+    display: inline-flex;
+    align-items: center;
     flex: 0 0 auto;
     min-height: 28px;
     padding: 0 10px;
@@ -357,6 +359,15 @@
     background: transparent;
     font-size: 0.7rem;
     font-weight: 650;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .track-chip:hover,
+  .part-chip:hover {
+    color: var(--accent-dark);
+    background: white;
   }
 
   .track-chip.is-active {
@@ -801,6 +812,50 @@
     padding-top: 54px;
   }
 
+  .index-context {
+    display: flex;
+    justify-content: space-between;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 34px 0 0;
+    color: var(--muted);
+    font-size: 0.72rem;
+  }
+
+  .index-context a {
+    color: var(--accent);
+    font-weight: 650;
+    text-decoration: none;
+  }
+
+  .index-document {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 64px 0 96px;
+  }
+
+  .index-document-header {
+    margin-bottom: 50px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .index-document-header h1 {
+    max-width: 760px;
+    margin: 12px 0 18px;
+    font-size: clamp(2.2rem, 5.5vw, 3.9rem);
+    font-weight: 750;
+    letter-spacing: -0.055em;
+    line-height: 1.12;
+  }
+
+  .index-document-header > p:not(.eyebrow, .print-only) {
+    max-width: 720px;
+    margin: 0;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
   .loading-state,
   .message-state {
     display: grid;
@@ -1192,6 +1247,18 @@
     .individual-context {
       padding-top: 26px;
     }
+
+    .index-context {
+      padding-top: 26px;
+    }
+
+    .index-document {
+      padding: 50px 0 72px;
+    }
+
+    .index-document-header h1 {
+      font-size: clamp(2rem, 10vw, 3.2rem);
+    }
   }
 
   @media (max-width: 420px) {
@@ -1276,6 +1343,26 @@
 
     .category-intro h1 {
       font-size: 26pt;
+    }
+
+    .index-document,
+    .index-document .guide-body {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0;
+      color: black;
+    }
+
+    .index-document-header {
+      margin-bottom: 9mm;
+      padding-bottom: 7mm;
+      border-bottom-color: #777;
+    }
+
+    .index-document-header h1 {
+      color: black;
+      font-size: 24pt;
     }
 
     .guide-section {
