@@ -77,7 +77,7 @@
     "category": "learning",
     "path": "library/learning/web-foundation/README.md",
     "type": "source",
-    "description": "웹의 동작 원리를 체계적으로 학습하기 위한 Web Foundation Learning Track 소개"
+    "description": "Web Foundation Learning Track의 목적, Part I 문서 목록, UI v3 읽기 방식과 운영 원칙을 정리한 안내 문서"
   },
   {
     "id": "learning-web-foundation-learning-path",

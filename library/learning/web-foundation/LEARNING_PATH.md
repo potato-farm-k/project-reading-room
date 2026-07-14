@@ -879,11 +879,11 @@ Part I의 HTTP, REST, CORS, Serverless, 아키텍처 개념이 가장 직접적�
 
 # 18. 참고 문서
 
-## README.md
+## [README.md](./README.md)
 
 Learning Track의 목적, 현재 상태, 주요 문서와 운영 원칙을 간단히 안내합니다.
 
-## WEB_REFERENCE_INDEX.md
+## [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md)
 
 용어와 개념이 어느 Guide에 설명되어 있는지 찾아볼 수 있는 색인입니다.
 
