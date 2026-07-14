@@ -644,7 +644,7 @@ CORS가 브라우저의 응답 접근을 통제하는
 
 ## 특정 개념을 찾을 때
 
-`WEB_REFERENCE_INDEX.md`를 사용합니다.
+[WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md)를 사용합니다.
 
 ---
 

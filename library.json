@@ -177,10 +177,10 @@
   },
   {
     "id": "learning-web-foundation-reference-index",
-    "title": "Web Foundation Reference Index",
+    "title": "Web Reference Index",
     "category": "learning",
     "path": "library/learning/web-foundation/WEB_REFERENCE_INDEX.md",
     "type": "source",
-    "description": "HTTP, Header, JSON, Cookie, MIME Type 등 반복 확인할 Web Foundation Reference 목차"
+    "description": "WEB-001부터 WEB-011까지의 주요 웹 기초 개념을 Guide, Category, 용어별로 찾아보는 Reference Index"
   }
 ]
