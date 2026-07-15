@@ -4,7 +4,7 @@ category: learning
 source_repo: project-reading-room
 source_path: library/learning/web-foundation/WEB_REFERENCE_INDEX.md
 copy_type: source
-last_reviewed: 2026-07-14
+last_reviewed: 2026-07-15
 print_friendly: true
 ---
 
@@ -21,9 +21,18 @@ print_friendly: true
 
 Web Foundation Learning의 세 인덱스 문서는 서로 다른 역할을 가집니다.
 
-- [README.md](./README.md) — Learning Track의 목적과 현재 상태
-- [LEARNING_PATH.md](./LEARNING_PATH.md) — Part·Category·Guide의 학습 순서와 완료 기준
-- WEB_REFERENCE_INDEX.md — 용어와 개념이 설명된 Guide의 위치
+```text
+README.md
+Learning Track의 목적과 현재 상태
+
+LEARNING_PATH.md
+Part·Category·Guide의 학습 순서와 완료 기준
+
+WEB_REFERENCE_INDEX.md
+용어와 개념이 설명된 Guide의 위치
+```
+
+Track 전체 소개는 [README.md](./README.md)에서, 학습 순서는 [LEARNING_PATH.md](./LEARNING_PATH.md)에서 확인합니다.
 
 이 문서는 다음 상황에서 사용합니다.
 
@@ -99,7 +108,7 @@ WEB-008 — REST API 응답에서 객체를 JSON으로 직렬화하는 과정
 
 ---
 
-## 5. WEB-001. How the Web Works
+## 5. [WEB-001. How the Web Works](./WEB-001-How-the-Web-Works.md)
 
 ### 주요 개념
 
@@ -142,7 +151,7 @@ GitHub Pages를 실제 서비스 구조에 배치하는 방법
 
 ---
 
-## 6. WEB-002. What Is a Browser
+## 6. [WEB-002. What Is a Browser](./WEB-002-What-Is-a-Browser.md)
 
 ### 주요 개념
 
@@ -180,7 +189,7 @@ WEB-011
 
 ---
 
-## 7. WEB-003. What Is HTML
+## 7. [WEB-003. What Is HTML](./WEB-003-What-Is-HTML.md)
 
 ### 주요 개념
 
@@ -219,7 +228,7 @@ HTML이 DOM으로 변환되는 과정
 
 ---
 
-## 8. WEB-004. Why CSS
+## 8. [WEB-004. Why CSS](./WEB-004-Why-CSS.md)
 
 ### 주요 개념
 
@@ -259,7 +268,7 @@ GitHub Pages에서 정적 UI를 구성하는 역할
 
 ---
 
-## 9. WEB-005. Why JavaScript
+## 9. [WEB-005. Why JavaScript](./WEB-005-Why-JavaScript.md)
 
 ### 주요 개념
 
@@ -298,7 +307,7 @@ WEB-011
 
 ---
 
-## 10. WEB-006. How Browser Builds a Page
+## 10. [WEB-006. How Browser Builds a Page](./WEB-006-How-Browser-Builds-a-Page.md)
 
 ### 주요 개념
 
@@ -341,7 +350,7 @@ JavaScript의 DOM 조작
 
 ---
 
-## 11. WEB-007. How HTTP Works
+## 11. [WEB-007. How HTTP Works](./WEB-007-How-HTTP-Works.md)
 
 ### 주요 개념
 
@@ -399,7 +408,7 @@ Serverless Proxy가 HTTP 요청을 중계하는 과정
 
 ---
 
-## 12. WEB-008. Why REST API
+## 12. [WEB-008. Why REST API](./WEB-008-Why-REST-API.md)
 
 ### 주요 개념
 
@@ -460,7 +469,7 @@ REST API를 서비스 아키텍처에 배치하는 방법
 
 ---
 
-## 13. WEB-009. Why CORS
+## 13. [WEB-009. Why CORS](./WEB-009-Why-CORS.md)
 
 ### 주요 개념
 
@@ -513,7 +522,7 @@ WEB-011
 
 ---
 
-## 14. WEB-010. Why Serverless
+## 14. [WEB-010. Why Serverless](./WEB-010-Why-Serverless.md)
 
 ### 주요 개념
 
@@ -562,7 +571,7 @@ Serverless를 전체 서비스 구조에 배치하는 방법
 
 ---
 
-## 15. WEB-011. GitHub Pages Architecture
+## 15. [WEB-011. GitHub Pages Architecture](./WEB-011-GitHub-Pages-Architecture.md)
 
 ### 주요 개념
 
@@ -1801,16 +1810,9 @@ Serverless
 
 # 27. UI v3 연결
 
-Learning 전용 UI v3에서는 상단 Part·Category 메뉴와 Category별 연속 읽기를 사용합니다.
+Learning 전용 UI v3에서는 상단 안내 navigation과 Part·Category navigation을 함께 사용합니다.
 
-이 문서는 다음 진입점으로 연결하는 것을 권장합니다.
-
-```text
-Reference
-→ WEB_REFERENCE_INDEX.md
-```
-
-권장 상단 안내 구조:
+현재 적용 구조:
 
 ```text
 Home
@@ -1821,12 +1823,57 @@ Learning Path
 
 Part I
 → WEB-001~WEB-011
+→ 5개 Category
+→ Category별 Guide 연속 읽기
 
 Reference
 → WEB_REFERENCE_INDEX.md
 ```
 
-현재 인덱스 문서 3종은 UI v3 상단 안내 navigation에서 직접 접근할 수 있습니다.
+이 문서는 UI v3의 `Reference` 메뉴에서 직접 접근할 수 있습니다.
+
+```text
+Reference
+→ WEB_REFERENCE_INDEX.md
+→ Web Reference Index
+```
+
+Reference 화면에서는 다음 방식으로 개념을 찾습니다.
+
+```text
+문서별 색인
+어느 Guide가 어떤 내용을 다루는가?
+
+Category별 색인
+관련 개념을 어떤 묶음으로 복습하는가?
+
+용어별 색인
+특정 용어가 어느 Guide에 설명되어 있는가?
+
+혼동 개념 비교
+비슷한 용어의 차이를 어디에서 확인하는가?
+```
+
+2026년 7월 15일 기준 확인 상태:
+
+```text
+Reference 화면 표시
+확인 완료
+
+상단 navigation과 문서 링크
+확인 완료
+
+기존 Part / Category 연속 읽기
+확인 완료
+
+모바일 화면
+확인 완료
+
+인쇄 / PDF 저장
+이번 마감 점검에서는 확인하지 않음
+```
+
+인쇄 기능은 기존 Reading Room의 브라우저 인쇄·PDF 저장 방식을 유지합니다. 다만 현재 Part I 마감 판단에는 인쇄 확인 결과를 포함하지 않습니다.
 
 ---
 
@@ -1874,7 +1921,9 @@ Deployment
 - 같은 개념이 여러 문서에서 다뤄질 때 주요 문서와 관련 문서를 구분한다.
 - 비교가 필요한 개념은 별도의 혼동 개념 비교에서 확인할 수 있다.
 - 프로젝트별 빠른 참조를 통해 실제 작업과 Guide를 연결할 수 있다.
-- UI v3에서는 `Reference` 메뉴의 진입 문서로 사용하는 것이 적합하다.
+- UI v3의 `Reference` 메뉴에서 이 문서에 직접 접근할 수 있다.
+- 화면, 링크와 모바일 동작은 확인 완료했다.
+- 인쇄·PDF 저장은 이번 마감 점검에서 확인하지 않았다.
 - Part II가 시작되면 실제 신규 Guide를 기준으로 색인을 확장한다.
 
 ---
@@ -1901,4 +1950,12 @@ Deployment
 - 프로젝트별 빠른 참조 추가
 - UI v3의 `Reference` 진입점과 인덱스 문서 노출 상태 추가
 - Part II 확장 원칙 추가
-- Learning UI v3 상단의 Home, Learning Path, Reference 직접 접근 상태 반영
+
+## 2026-07-15
+
+- UI v3의 `Reference` 메뉴 직접 접근 완료 상태 반영
+- `Home / Learning Path / Part I / Reference` 전체 navigation 구조 반영
+- 기존 Part I Category 연속 읽기 유지 상태 반영
+- Reference 화면, 링크와 모바일 확인 완료 기록
+- 인쇄·PDF 저장은 이번 마감 점검에서 확인하지 않았음을 명시
+- UI v3 직접 노출이 별도 필요하다는 오래된 문구 제거
