@@ -547,5 +547,5 @@ DECISION_LOG.md
 ```text
 Project Reading Room은 운영 중이며,
 Web Foundation Learning Part I과 Learning UI v3 마감이 완료되었고,
-루트 운영문서 정리 후 Part II 기획을 시작할 단계다.
+루트 운영문서 3종 구성이 완료되어 Part II 기획을 시작할 단계다.
 ```

@@ -344,9 +344,9 @@ library/learning/web-foundation/WEB_REFERENCE_INDEX.md
 
 ---
 
-# 2026-07-04 이전 주요 이력 요약
+# Earlier history summary
 
-> 아래 항목은 Changelog 정식 관리 시작 이전의 주요 구조를 현재 저장소 기준으로 요약한 것입니다.
+> 아래 항목은 Changelog 정식 관리 시작 이전의 주요 구조를 현재 저장소 기준으로 요약한 것입니다. 정확한 반영일을 확인하기 어려운 과거 작업에는 임의 날짜를 부여하지 않습니다.
 
 ## Added
 
