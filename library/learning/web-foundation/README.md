@@ -4,7 +4,7 @@ category: learning
 source_repo: project-reading-room
 source_path: library/learning/web-foundation/README.md
 copy_type: source
-last_reviewed: 2026-07-14
+last_reviewed: 2026-07-15
 print_friendly: true
 ---
 
@@ -167,7 +167,7 @@ Part I — 웹의 원리와 서비스 구조
 
 | Part | 주제 | 상태 |
 |---|---|---|
-| Part I | 웹의 원리와 서비스 구조 | 1차 학습 및 주요 질의 반영 완료 |
+| Part I | 웹의 원리와 서비스 구조 | 주요 문서·UI v3 적용 완료, 인덱스 마감 개정 완료 |
 | Part II | 웹 애플리케이션 실습 | 준비 단계 |
 | Part III | 웹 서비스 확장 | 향후 계획 |
 
@@ -341,22 +341,45 @@ Learning 카테고리 전용
 
 좌측 검색·선택 프레임 없음
 
-상단 Part 메뉴
+상단 안내 navigation
+Home / Learning Path / Part I / Reference
 
-상단 Category 메뉴
+상단 Part / Category navigation
 
 Category별 Guide 연속 읽기
 ```
 
 UI v3는 개별 문서를 하나씩 여는 방식뿐 아니라, 관련 Guide를 Category 단위로 이어 읽을 수 있도록 구성되어 있습니다.
 
+Learning Track 소개, 학습 경로, Part I 학습 문서, 용어 색인을 상단 navigation에서 직접 오갈 수 있습니다.
+
 ---
 
 ## 10. UI v3에서 읽는 방법
 
-### 처음 학습할 때
+### Learning Track을 처음 확인할 때
 
-Guide 번호 순서대로 읽습니다.
+```text
+Home
+→ README.md
+→ Web Foundation Learning Track
+```
+
+Learning Track의 목적, 현재 상태, Category 구성과 운영 원칙을 확인합니다.
+
+### 전체 학습 순서를 확인할 때
+
+```text
+Learning Path
+→ LEARNING_PATH.md
+→ Web Foundation Learning Path
+```
+
+Part, Category, Guide의 순서와 각 구간의 학습 목표·완료 기준을 확인합니다.
+
+### Part I을 처음 학습할 때
+
+`Part I`에서 Guide 번호 순서대로 읽습니다.
 
 ```text
 WEB-001
@@ -370,7 +393,7 @@ WEB-011
 
 ### Category별로 복습할 때
 
-상단 Category 메뉴를 이용합니다.
+Part I의 Category 메뉴를 이용합니다.
 
 예:
 
@@ -385,46 +408,55 @@ HTTP, REST, CORS를 하나의 흐름으로 이어 읽을 수 있습니다.
 
 ### 특정 개념을 찾을 때
 
-[WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md)를 사용합니다.
+```text
+Reference
+→ WEB_REFERENCE_INDEX.md
+→ Web Reference Index
+```
 
-### 전체 학습 순서를 확인할 때
-
-[LEARNING_PATH.md](./LEARNING_PATH.md)를 사용합니다.
+문서별·Category별·용어별 색인을 사용해 관련 Guide를 찾습니다.
 
 ---
 
-## 11. 인덱스 문서의 UI 노출 상태
+## 11. 인덱스 문서의 UI 노출 및 확인 상태
 
-다음 세 문서는 Learning Track의 안내와 탐색을 담당합니다.
+다음 세 인덱스 문서는 UI v3 상단 navigation에 연결되어 있습니다.
 
-```text
-README.md
-Web Foundation Learning Track
+| UI 메뉴 | 문서 | 역할 |
+|---|---|---|
+| Home | `README.md` | Learning Track 소개와 현재 상태 |
+| Learning Path | `LEARNING_PATH.md` | 학습 순서와 완료 기준 |
+| Reference | `WEB_REFERENCE_INDEX.md` | 용어와 관련 Guide 탐색 |
 
-LEARNING_PATH.md
-Web Foundation Learning Path
-
-WEB_REFERENCE_INDEX.md
-Web Reference Index
-```
-
-현재 UI v3는 Part와 Category의 Guide 연속 읽기를 중심으로 적용되어 있으며, 상단 안내 navigation에서 세 인덱스 문서에 직접 접근할 수 있습니다.
-
-권장 연결 구조:
+기존 Part I 학습 구조도 함께 유지됩니다.
 
 ```text
-Home
-→ README.md
-
-Learning Path
-→ LEARNING_PATH.md
-
 Part I
 → WEB-001~WEB-011
-
-Reference
-→ WEB_REFERENCE_INDEX.md
+→ 5개 Category
+→ Category별 Guide 연속 읽기
 ```
+
+2026년 7월 15일 기준 확인 상태:
+
+```text
+화면 표시
+확인 완료
+
+상단 메뉴와 문서 링크
+확인 완료
+
+기존 Part / Category 연속 읽기
+확인 완료
+
+모바일 화면
+확인 완료
+
+인쇄 / PDF 저장
+이번 마감 점검에서는 확인하지 않음
+```
+
+인쇄 기능은 기존 Reading Room의 브라우저 인쇄·PDF 저장 방식을 유지합니다. 다만 현재 Part I 마감 판단에는 인쇄 확인 결과를 포함하지 않습니다.
 
 ---
 
@@ -719,4 +751,12 @@ Part I의 HTTP, REST, CORS, Serverless, 서비스 아키텍처를 실제로 연�
 - Part I 완료 기준 추가
 - Part II와 Part III의 방향 정리
 - Project Reading Room, Potato's Day, Living Aegis Origin, 공공데이터 서비스 연결 추가
-- Learning UI v3 상단에서 Home, Learning Path, Reference 인덱스 문서 접근 가능 상태 반영
+
+## 2026-07-15
+
+- UI v3의 `Home / Learning Path / Part I / Reference` navigation 적용 완료 상태 반영
+- README.md, LEARNING_PATH.md, WEB_REFERENCE_INDEX.md 직접 접근 구조 반영
+- 기존 Part I Category 연속 읽기 유지 상태 반영
+- 화면, 링크와 모바일 확인 완료 기록
+- 인쇄·PDF 저장은 이번 마감 점검에서 확인하지 않았음을 명시
+- Part I 상태를 인덱스 마감 개정 단계로 갱신
