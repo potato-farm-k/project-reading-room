@@ -4,7 +4,7 @@ category: learning
 source_repo: project-reading-room
 source_path: library/learning/web-foundation/LEARNING_PATH.md
 copy_type: source
-last_reviewed: 2026-07-14
+last_reviewed: 2026-07-15
 print_friendly: true
 ---
 
@@ -102,7 +102,7 @@ Part I — 웹의 원리와 서비스 구조
 ```text
 Part I
 웹의 원리와 서비스 구조
-상태: 1차 학습 및 질의 반영 완료
+상태: 주요 Guide 개정 및 Learning UI v3 적용 완료
 
 Part II
 웹 애플리케이션 실습
@@ -185,7 +185,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-001. How the Web Works
+## [WEB-001. How the Web Works](./WEB-001-How-the-Web-Works.md)
 
 ### 핵심 질문
 
@@ -210,7 +210,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-002. What Is a Browser
+## [WEB-002. What Is a Browser](./WEB-002-What-Is-a-Browser.md)
 
 ### 핵심 질문
 
@@ -252,7 +252,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-003. What Is HTML
+## [WEB-003. What Is HTML](./WEB-003-What-Is-HTML.md)
 
 ### 핵심 질문
 
@@ -276,7 +276,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-004. Why CSS
+## [WEB-004. Why CSS](./WEB-004-Why-CSS.md)
 
 ### 핵심 질문
 
@@ -317,7 +317,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-005. Why JavaScript
+## [WEB-005. Why JavaScript](./WEB-005-Why-JavaScript.md)
 
 ### 핵심 질문
 
@@ -341,7 +341,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-006. How Browser Builds a Page
+## [WEB-006. How Browser Builds a Page](./WEB-006-How-Browser-Builds-a-Page.md)
 
 ### 핵심 질문
 
@@ -385,7 +385,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-007. How HTTP Works
+## [WEB-007. How HTTP Works](./WEB-007-How-HTTP-Works.md)
 
 ### 핵심 질문
 
@@ -417,7 +417,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-008. Why REST API
+## [WEB-008. Why REST API](./WEB-008-Why-REST-API.md)
 
 ### 핵심 질문
 
@@ -453,7 +453,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-009. Why CORS
+## [WEB-009. Why CORS](./WEB-009-Why-CORS.md)
 
 ### 핵심 질문
 
@@ -502,7 +502,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-010. Why Serverless
+## [WEB-010. Why Serverless](./WEB-010-Why-Serverless.md)
 
 ### 핵심 질문
 
@@ -536,7 +536,7 @@ API는 어떻게 설계하고 보호하는가?
 
 ---
 
-## WEB-011. GitHub Pages Architecture
+## [WEB-011. GitHub Pages Architecture](./WEB-011-GitHub-Pages-Architecture.md)
 
 ### 핵심 질문
 
@@ -591,18 +591,37 @@ UI v3의 주요 구조:
 ```text
 좌측 검색·선택 프레임 없음
 
-상단 Home / Learning Path / Reference 안내 navigation
+상단 안내 navigation
+Home / Learning Path / Part I / Reference
 
-상단 Part 메뉴
-+
-상단 Category 메뉴
-+
-카테고리별 문서 연속 읽기
+상단 Part / Category navigation
+
+Category별 Guide 연속 읽기
 ```
 
-## 처음 학습할 때
+## Learning Track을 처음 확인할 때
 
-`WEB-001`부터 번호 순서대로 읽습니다.
+```text
+Home
+→ README.md
+→ Web Foundation Learning Track
+```
+
+Learning Track의 목적, 현재 상태, Category 구성과 운영 원칙을 확인합니다.
+
+## 전체 학습 순서를 확인할 때
+
+```text
+Learning Path
+→ LEARNING_PATH.md
+→ Web Foundation Learning Path
+```
+
+Part, Category, Guide의 순서와 각 구간의 학습 목표·완료 기준을 확인합니다.
+
+## Part I을 처음 학습할 때
+
+`Part I`에서 `WEB-001`부터 번호 순서대로 읽습니다.
 
 ```text
 WEB-001
@@ -618,7 +637,7 @@ WEB-011
 
 ## Category별로 복습할 때
 
-상단 Category 메뉴를 이용하여 관련 Guide를 한 페이지에서 연속으로 읽습니다.
+Part I의 Category 메뉴를 이용하여 관련 Guide를 한 페이지에서 연속으로 읽습니다.
 
 예:
 
@@ -646,7 +665,36 @@ CORS가 브라우저의 응답 접근을 통제하는
 
 ## 특정 개념을 찾을 때
 
-[WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md)를 사용합니다.
+```text
+Reference
+→ WEB_REFERENCE_INDEX.md
+→ Web Reference Index
+```
+
+문서별·Category별·용어별 색인을 이용해 관련 Guide를 찾습니다.
+
+## UI v3 확인 상태
+
+2026년 7월 15일 기준:
+
+```text
+화면 표시
+확인 완료
+
+상단 navigation과 문서 링크
+확인 완료
+
+기존 Part / Category 연속 읽기
+확인 완료
+
+모바일 화면
+확인 완료
+
+인쇄 / PDF 저장
+이번 마감 점검에서는 확인하지 않음
+```
+
+인쇄 기능은 기존 Reading Room의 브라우저 인쇄·PDF 저장 방식을 유지합니다. 다만 현재 Part I 마감 판단에는 인쇄 확인 결과를 포함하지 않습니다.
 
 ---
 
@@ -885,9 +933,23 @@ Part I의 HTTP, REST, CORS, Serverless, 아키텍처 개념이 가장 직접적�
 
 Learning Track의 목적, 현재 상태, 주요 문서와 운영 원칙을 간단히 안내합니다.
 
+UI v3에서는 다음 경로로 접근합니다.
+
+```text
+Home
+→ README.md
+```
+
 ## [WEB_REFERENCE_INDEX.md](./WEB_REFERENCE_INDEX.md)
 
 용어와 개념이 어느 Guide에 설명되어 있는지 찾아볼 수 있는 색인입니다.
+
+UI v3에서는 다음 경로로 접근합니다.
+
+```text
+Reference
+→ WEB_REFERENCE_INDEX.md
+```
 
 ---
 
@@ -920,9 +982,17 @@ Learning Track의 목적, 현재 상태, 주요 문서와 운영 원칙을 간�
 - 각 Category의 목적, 문서, 완료 기준 추가
 - WEB-007~WEB-011 개정 내용을 학습 목표에 반영
 - Learning 전용 UI v3의 상단 Part·Category 메뉴와 연속 읽기 방식 반영
-- Learning UI v3의 Home, Learning Path, Reference 상단 안내 navigation 반영
 - 처음 학습, Category 복습, 종합 질문, 용어 검색 방법 구분
 - 문서별 순차 개정 프로세스 추가
 - Part I 전체 완료 기준 추가
 - Part II와 Part III의 방향을 계획 상태로 정리
 - Project Reading Room, Potato's Day, Living Aegis Origin, 공공데이터 서비스 연결 추가
+
+## 2026-07-15
+
+- UI v3의 `Home / Learning Path / Part I / Reference` navigation 적용 완료 상태 반영
+- README.md, LEARNING_PATH.md, WEB_REFERENCE_INDEX.md의 실제 접근 경로 추가
+- 기존 Part I Category 연속 읽기 유지 상태 반영
+- 화면, 링크와 모바일 확인 완료 기록
+- 인쇄·PDF 저장은 이번 마감 점검에서 확인하지 않았음을 명시
+- Part I 상태를 주요 Guide 개정 및 UI v3 적용 완료로 갱신
