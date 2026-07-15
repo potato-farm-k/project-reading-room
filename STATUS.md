@@ -407,6 +407,8 @@ UI와 링크 확인
 - Learning UI v3 인덱스 navigation 적용
 - 화면·링크·모바일 확인
 - 마감 개정판 3종 저장소 반영 확인
+- 루트 STATUS.md 추가
+- 루트 CHANGELOG.md 추가
 ```
 
 ---
@@ -415,14 +417,14 @@ UI와 링크 확인
 
 현재 진행 중인 구현 작업은 없습니다.
 
-다음 단계로 이동하기 전에 Reading Room 루트 운영문서를 정리하고 있습니다.
+Reading Room 루트 운영문서는 다음 상태입니다.
 
 ```text
 STATUS.md
-작성 중
+현재 상태 관리 시작
 
 CHANGELOG.md
-작성 예정
+변경 이력 관리 시작
 
 DECISION_LOG.md
 작성 예정
@@ -435,15 +437,10 @@ DECISION_LOG.md
 우선순위:
 
 ```text
-1. STATUS.md 확정 및 저장소 반영
-
-2. CHANGELOG.md 작성
-   Reading Room 전체 변경 이력 정리
-
-3. DECISION_LOG.md 작성
+1. DECISION_LOG.md 작성
    장기 운영 원칙과 주요 결정 기록
 
-4. Web Foundation Learning Part II 기획
+2. Web Foundation Learning Part II 기획
    목표
    Category
    첫 실습 프로젝트
