@@ -581,3 +581,4 @@ Do not change learning-map.js for simple text revisions.
 - 권장 문구가 없으면 변경 내용을 요약하는 간결한 영어 명령형 메시지를 제안한다.
 - 커밋을 직접 완료했더라도 사용한 커밋 메시지를 코드 블록으로 함께 알린다.
 - 문서 구조, UI surface, Learning flow, repo-level 운영문서 변경을 완료할 때는 `CHANGELOG.md` 갱신 여부를 확인한다.
+- 문서 구조, UI surface 역할, `library.json` 스키마, Learning flow를 바꾸기 전에는 `DECISION_LOG.md`의 Accepted decision을 확인한다.

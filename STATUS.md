@@ -409,6 +409,7 @@ UI와 링크 확인
 - 마감 개정판 3종 저장소 반영 확인
 - 루트 STATUS.md 추가
 - 루트 CHANGELOG.md 추가
+- 루트 DECISION_LOG.md 추가
 ```
 
 ---
@@ -427,7 +428,7 @@ CHANGELOG.md
 변경 이력 관리 시작
 
 DECISION_LOG.md
-작성 예정
+의사결정 기록 관리 시작
 ```
 
 ---
@@ -437,10 +438,7 @@ DECISION_LOG.md
 우선순위:
 
 ```text
-1. DECISION_LOG.md 작성
-   장기 운영 원칙과 주요 결정 기록
-
-2. Web Foundation Learning Part II 기획
+1. Web Foundation Learning Part II 기획
    목표
    Category
    첫 실습 프로젝트

@@ -34,7 +34,6 @@ Not Verified
 
 - 브라우저 인쇄 확인
 - PDF 저장 출력 확인
-- `DECISION_LOG.md` 작성
 - Web Foundation Learning Part II 기획
 
 ---
@@ -94,6 +93,7 @@ DECISION_LOG.md
 
 - 저장소 전체의 현재 운영 상태를 관리하기 위한 루트 `STATUS.md`를 추가했습니다.
 - 저장소 전체 변경 이력을 날짜순으로 관리하기 위한 루트 `CHANGELOG.md`를 추가했습니다.
+- 저장소 전체 의사결정과 결정 이유를 관리하기 위한 루트 `DECISION_LOG.md`를 추가했습니다.
 - 운영문서는 개별 프로젝트별로 분리하지 않고, Project Reading Room 저장소 관점에서 통합 관리하기로 했습니다.
 
 ### Learning UI v3 인덱스 navigation
